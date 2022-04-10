@@ -10,7 +10,7 @@ import { useMediaQuery } from "react-responsive";
 export default function Layout({ children, title }) {
   const router = useRouter();
 
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const isTabletOrMobile = useMediaQuery({ query: "(min-width: 778px)" });
 
   return (
     <div>
@@ -18,15 +18,15 @@ export default function Layout({ children, title }) {
         <title>{title}</title>
       </Head>
       {/* Background */}
-      <div className=" w-full h-30 shadow-2xl ">
+      <div className="h-16 w-full flex items-center justify-center md:h-28 shadow-2xl ">
         {/* Logo */}
         <div className="logo flex justify-center ">
           <Image
+            width={isTabletOrMobile ? 200 : 100}
             className="cursor-pointer"
             src={logo}
             alt="logo"
             priority="responsive"
-            width={160}
             onClick={() => router.push("/")}
           />
         </div>
@@ -36,9 +36,9 @@ export default function Layout({ children, title }) {
       {/* Background_cover */}
 
       {isTabletOrMobile ? (
-        <Image src={background3} priority="responsive" alt="background3" />
+        <Image src={background} priority="responsive" alt="background3" />
       ) : (
-        <Image src={background} priority="responsive" alt="background" />
+        <Image src={background3} priority="responsive" alt="background" />
       )}
 
       {/* <Image

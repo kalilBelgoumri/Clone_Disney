@@ -2,12 +2,17 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import background from "../assets/disney1_background.png";
+import background3 from "../assets/disney3_background.png";
 import background_down from "../assets/download.svg";
 import logo from "../assets/logo.svg";
 import { useRouter } from "next/router";
+import { useMediaQuery } from "react-responsive";
 
 export default function Layout({ children, title }) {
   const router = useRouter();
+
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
   return (
     <div>
       <Head>
@@ -30,15 +35,19 @@ export default function Layout({ children, title }) {
         <div className=" h-[8.5vh] border-t-gray border-[1px]"></div>
       </div>
       {/* Background_cover */}
-      <Image src={background} priority="responsive" alt="background" />
-      <div className="">
-        <Image
-          className="bg-red-500 w-screen"
-          src={background_down}
-          priority="responsive"
-          alt="backround_down"
-        />
-      </div>
+
+      {isTabletOrMobile ? (
+        <Image src={background3} priority="responsive" alt="image" />
+      ) : (
+        <Image src={background} priority="responsive" alt="image" />
+      )}
+
+      <Image
+        className="bg-red-500 w-screen"
+        src={background_down}
+        priority="responsive"
+        alt="backround_down"
+      />
       <main>{children}</main>
     </div>
   );

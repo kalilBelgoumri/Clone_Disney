@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.test {
+    background-image: url(../assets/disney3_background.png);
+    background-color: brown;
+}

@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 import { useMediaQuery } from "react-responsive";
 import { FaSearch } from "react-icons/fa";
 import Search from "./Search";
+import HamburgerMenu from "./HamburgerMenu";
 
 export default function Layout({ children, title }) {
   const router = useRouter();
@@ -24,7 +25,11 @@ export default function Layout({ children, title }) {
         <title>{title}</title>
       </Head>
       {/* Background */}
-      <div className="h-16 w-full flex items-center md:h-28 shadow-2xl ">
+      <div className="h-12 w-full flex items-center md:h-28 shadow-2xl ">
+        <div className="flex flex-col justify-center items-center absolute ml-2 md:hidden">
+          <HamburgerMenu />
+          <span className="text-[10px]">Menu</span>
+        </div>
         {/* Logo */}
         <div className="logo flex mx-auto items-center ">
           <Image

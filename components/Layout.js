@@ -9,7 +9,8 @@ import { useMediaQuery } from "react-responsive";
 import { FaSearch } from "react-icons/fa";
 import Search from "./Search";
 import HamburgerMenu from "./HamburgerMenu";
-
+import { MdAccessTime } from "react-icons/md";
+import horloge from "../assets/horloge.svg";
 export default function Layout({ children, title }) {
   const router = useRouter();
   const searchInput = useRef(null);
@@ -33,13 +34,25 @@ export default function Layout({ children, title }) {
         {/* Logo */}
         <div className="logo flex mx-auto items-center ">
           <Image
-            width={isTabletOrMobile ? 200 : 100}
+            width={isTabletOrMobile ? 130 : 150}
             className="cursor-pointer"
             src={logo}
             alt="logo"
             priority="responsive"
             onClick={() => router.push("/")}
           />
+          <div className="absolute right-[24%]">
+            <button className=" rounded-full border  shadow-2xl py-1 px-3 flex ">
+              <Image src={horloge} alt="horloge" />
+              <span className="text-[8px] font-semibold pl-3">
+                {/* <MdAccessTime color="blue" /> */}
+                Horaires des Parcs{" "}
+              </span>
+            </button>
+            <div className="bord">
+              <Search />
+            </div>
+          </div>
         </div>
         <div className="flex absolute right-6 z-10 md:hidden">
           <FaSearch size="19" />
@@ -50,7 +63,12 @@ export default function Layout({ children, title }) {
       </div>
       {/* Background_cover */}
       {isTabletOrMobile ? (
-        <Image src={background} priority="responsive" alt="background3" />
+        <Image
+          className="w-screen"
+          src={background}
+          priority="responsive"
+          alt="background3"
+        />
       ) : (
         <Image src={background3} priority="responsive" alt="background" />
       )}

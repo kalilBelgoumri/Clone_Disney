@@ -10,6 +10,7 @@ import Navbar from "./Navbar";
 import Link from "next/link";
 import { useRef } from "react";
 import download from "../public/download.svg";
+import PaperNav from "./Paper";
 
 export default function Layout({ children, title }) {
   const router = useRouter();
@@ -126,13 +127,13 @@ export default function Layout({ children, title }) {
       ) : (
         <Image src={background3} priority="responsive" alt="background" />
       )}
-      <div className="absolute top[172vh]">
+      {/* <div className="absolute top-[172vh]">
         <Image src={download} priority="responsive" alt="download" />
-      </div>
-      <div className="absolute top[172vh] right-0">
-        <Image src={download} priority="responsive" alt="download" />
-      </div>
+      </div> */}
 
+      <div className="flex justify-center relative bottom-32">
+        <PaperNav />
+      </div>
       <main>{children}</main>
     </>
   );

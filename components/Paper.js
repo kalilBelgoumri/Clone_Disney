@@ -8,17 +8,14 @@ export default function PaperNav() {
       sx={{
         display: "flex",
         "& > :not(style)": {
-          m: 1,
+          borderRadius: 10,
           width: 1000,
-          height: 1000,
-          backgroundColor: "red",
-          position: "absolute",
-          top: 0,
-          zIndex: 1000,
+          height: 220,
+          bottom: 100,
+          boxShadow: "rgb(0 0 0 / 10%) 0px 4px 32px;",
         },
       }}
     >
-      <Paper variant="outlined" />
       <Paper variant="outlined" square />
     </Box>
   );

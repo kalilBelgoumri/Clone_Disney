@@ -38,7 +38,7 @@ function Navbar() {
               </span>
             </button>
           </div>
-          <div className="login flex items-center  md:hidden ">
+          <div className="hidden md:flex login  items-center lg:hidden ">
             <FaUserAlt />
           </div>
           {/* Cart */}
@@ -46,7 +46,7 @@ function Navbar() {
             <CartBadge />
           </div>
           {/* Desktop */}
-          <div className="flex  z-10 lg:hidden">
+          <div className="flex z-10 md:hidden">
             <FaSearch size="19" />
           </div>
           <div className="">

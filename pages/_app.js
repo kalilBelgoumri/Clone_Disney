@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import "../styles/globals.css";
+import dynamic from "next/dynamic";
 
-export default function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
   const [showChild, setShowChild] = useState(false);
 
   useEffect(() => {
@@ -21,4 +22,8 @@ export default function MyApp({ Component, pageProps }) {
       </div>
     );
   }
-}
+};
+
+export default dynamic(() => Promise.resolve(MyApp), {
+  ssr: false,
+});

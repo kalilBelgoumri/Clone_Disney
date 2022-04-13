@@ -1,6 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+    html {
+        @apply font-avenir;
+    }
+}
+
+@font-face {
+    font-family: "AVENIR";
+    src: url("/public/fonts/AvenirLTStd-Black.otf");
+}
+
 .searchInputAdd {
     width: 100%;
 }

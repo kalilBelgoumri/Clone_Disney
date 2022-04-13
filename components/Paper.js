@@ -1,6 +1,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
+import MenuTab from "./MenuTab";
 
 export default function PaperNav() {
   return (
@@ -16,7 +17,9 @@ export default function PaperNav() {
         },
       }}
     >
-      <Paper variant="outlined" square />
+      <Paper className="flex justify-center" variant="outlined">
+        <MenuTab />
+      </Paper>
     </Box>
   );
 }

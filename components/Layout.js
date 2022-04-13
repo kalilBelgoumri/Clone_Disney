@@ -121,17 +121,22 @@ export default function Layout({ children, title }) {
         <Image
           className="w-screen"
           src={background}
-          priority="responsive"
+          priority={true}
           alt="background3"
         />
       ) : (
-        <Image src={background3} priority="responsive" alt="background" />
+        <Image
+          src={background3}
+          priority="responsive"
+          loading="eager"
+          alt="background"
+        />
       )}
       {/* <div className="absolute top-[172vh]">
         <Image src={download} priority="responsive" alt="download" />
       </div> */}
 
-      <div className="flex justify-center relative bottom-32">
+      <div className="flex justify-center relative bottom-32 px-10">
         <PaperNav />
       </div>
       <main>{children}</main>

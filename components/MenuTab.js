@@ -53,20 +53,38 @@ export default function MenuTab() {
           borderColor: "divider",
           display: "flex",
           justifyContent: "center",
+          fontFamily: "avenir",
         }}
       >
         <Tabs
-          sx={{ display: "flex", justifyContent: "center" }}
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label="Hotêl + Billets" {...a11yProps(0)} />
-          <Tab label="Billets" {...a11yProps(1)} />
+          <Tab
+            sx={{
+              fontSize: 14,
+              fontWeight: "bolder",
+              fontFamily: "avenir",
+              textTransform: "none",
+            }}
+            label="Hotêl + Billets "
+            {...a11yProps(0)}
+          />
+          <Tab
+            sx={{
+              fontSize: 14,
+              fontWeight: "bolder",
+              fontFamily: "avenir",
+              textTransform: "none",
+            }}
+            label="Billets"
+            {...a11yProps(1)}
+          />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        Item One
+        <div className="text-center">Item One</div>
       </TabPanel>
       <TabPanel value={value} index={1}>
         Item Two

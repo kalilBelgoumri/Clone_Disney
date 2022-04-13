@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -6,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        avenir: ["AVENIR", "cursive"],
+        avenir: ["avenir", ...defaultTheme.fontFamily.sans],
       },
     },
   },

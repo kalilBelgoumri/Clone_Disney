@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "../styles/globals.css";
 import dynamic from "next/dynamic";
+import "react-date-range/dist/styles.css"; // main css file
+import "react-date-range/dist/theme/default.css"; // theme css file
 
 const MyApp = ({ Component, pageProps }) => {
   const [showChild, setShowChild] = useState(false);

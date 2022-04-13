@@ -1,11 +1,24 @@
+import { useEffect, useState } from "react";
 import "../styles/globals.css";
 
-function MyApp({ Component, pageProps }) {
-  return (
-    <div className="overflow-hidden font-avenir">
-      <Component {...pageProps} />
-    </div>
-  );
-}
+export default function MyApp({ Component, pageProps }) {
+  const [showChild, setShowChild] = useState(false);
 
-export default MyApp;
+  useEffect(() => {
+    setShowChild(true);
+  }, []);
+
+  if (!showChild) {
+    return null;
+  }
+
+  if (typeof window === "undefined") {
+    return <></>;
+  } else {
+    return (
+      <div className="overflow-hidden">
+        <Component {...pageProps} />
+      </div>
+    );
+  }
+}

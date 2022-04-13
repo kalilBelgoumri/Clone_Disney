@@ -4,7 +4,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-
+import DatePickers from "./DatePickers";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -84,7 +84,9 @@ export default function MenuTab() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <div className="text-center">Item One</div>
+        <div className="text-center">
+          <DatePickers />
+        </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
         Item Two

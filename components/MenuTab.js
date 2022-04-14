@@ -6,9 +6,8 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import DatePickers from "./DatePickers";
 import ComboBox from "./Autocomplete";
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
+import datas from "../data/Datas";
+function TabPanel({ children, value, index, ...other }) {
   return (
     <div
       role="tabpanel"
@@ -89,7 +88,7 @@ export default function MenuTab() {
         value={value}
         index={0}
       >
-        <div className="mb-5 flex justify-around relative">
+        <div className="flex-col mb-5 flex justify-around relative">
           <span className="absolute text-[12px] left-[26px] flex text-[rgb(37, 48, 80)] font-avenir">
             Sélectionnez vos dates
           </span>
@@ -103,8 +102,12 @@ export default function MenuTab() {
         <div className="flex gap-5 items-center md:flex-row md:items-center ">
           <DatePickers />
 
-          <ComboBox label="test" year="1995" />
-          <ComboBox label="test" year="1995" />
+          <ComboBox
+            label={datas.map((data) => data.hotel)}
+            year="1995"
+            label1="Hotel"
+          />
+          <ComboBox label="test" year="1995" label1="1 chambre/2 visiteurs" />
           <button
             id="btnR"
             className="rounded-full text-white font-avenir px-8 py-2 text-sm cursor-pointer  border focus:bg-blue-500"
@@ -120,3 +123,14 @@ export default function MenuTab() {
     </Box>
   );
 }
+
+// This also gets called at build time
+export async function getStaticProps() {
+  const res = await fetch(`../datas`);
+  const datas = await res.json();
+
+  // Pass post data to the page via props
+  return { props: { datas } };
+}
+
+console.log(datas);

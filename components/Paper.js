@@ -27,7 +27,7 @@ export default function PaperNav() {
         },
       }}
     >
-      <Paper className="flex justify-center" variant="outlined">
+      <Paper className="flex justify-center items-center" variant="outlined">
         <MenuTab />
       </Paper>
     </Box>

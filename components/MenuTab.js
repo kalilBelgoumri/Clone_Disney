@@ -85,14 +85,20 @@ export default function MenuTab() {
         </Tabs>
       </Box>
       <TabPanel
-        className="flex justify-center flex-col md:flex-row md:justify-start"
+        className="flex flex-col md:justify-start"
         value={value}
         index={0}
       >
-        <div className="flex flex-col justify-center items-center gap-5 md:flex-row ">
+        <div className="mb-3 ml-5">
+          <span className="text-[12px] flex text-[rgb(37, 48, 80)] font-avenir">
+            Sélectionnez vos dates
+          </span>
+        </div>
+        <div className="flex gap-5 items-center md:flex-row md:items-center ">
           <DatePickers />
-          <ComboBox />
-          <ComboBox />
+
+          <ComboBox label="test" year="1995" />
+          <ComboBox label="test" year="1995" />
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>

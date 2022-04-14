@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { DateRangePicker, START_DATE, END_DATE } from "react-nice-dates";
 import "react-nice-dates/build/style.css";
 import { IoIosCalendar } from "react-icons/io";
-import { IconButton } from "@mui/material/IconButton";
 
 function Datepickers() {
   const [startDate, setStartDate] = useState();
@@ -27,6 +26,11 @@ function Datepickers() {
             </span>
           </div>
           <div className="date-range flex">
+            <div className="flex  justify-center items-center">
+              <div className="relative z-10 left-[142px] ">
+                <IoIosCalendar />
+              </div>
+            </div>
             <input
               className={
                 "input rounded-sm border border-gray-500 w-44" +
@@ -36,16 +40,19 @@ function Datepickers() {
               placeholder="Arrivée"
             />
             <span className="date-range_arrow" />
-
-            <input
-              className={
-                "input  rounded-sm border border-gray-500 w-44" +
-                (focus === END_DATE ? " -focused" : "")
-              }
-              {...endDateInputProps}
-              placeholder="Départ"
-            />
-            <IoIosCalendar />
+            <div className="flex  justify-center items-center">
+              <div className="relative left-[150px] z-10">
+                <IoIosCalendar />
+              </div>
+              <input
+                className={
+                  "input  rounded-sm border border-gray-500 w-44" +
+                  (focus === END_DATE ? " -focused" : "")
+                }
+                {...endDateInputProps}
+                placeholder="Départ"
+              />
+            </div>
           </div>
         </>
       )}

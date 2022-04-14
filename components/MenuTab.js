@@ -89,9 +89,15 @@ export default function MenuTab() {
         value={value}
         index={0}
       >
-        <div className="mb-3 ml-5">
-          <span className="text-[12px] flex text-[rgb(37, 48, 80)] font-avenir">
+        <div className="mb-5 flex justify-around relative">
+          <span className="absolute text-[12px] left-[26px] flex text-[rgb(37, 48, 80)] font-avenir">
             Sélectionnez vos dates
+          </span>
+          <span className="absolute text-[12px] left-[426px] flex text-[rgb(37, 48, 80)] font-avenir">
+            Hôtels et Resorts
+          </span>
+          <span className="absolute right-[294px] text-[12px] flex text-[rgb(37, 48, 80)] font-avenir">
+            Chambres et visiteurs
           </span>
         </div>
         <div className="flex gap-5 items-center md:flex-row md:items-center ">
@@ -99,6 +105,13 @@ export default function MenuTab() {
 
           <ComboBox label="test" year="1995" />
           <ComboBox label="test" year="1995" />
+          <button
+            id="btnR"
+            className="rounded-full text-white font-avenir px-8 py-2 text-sm cursor-pointer  border focus:bg-blue-500"
+            type="submit"
+          >
+            Réserver
+          </button>
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>

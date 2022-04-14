@@ -20,38 +20,42 @@ function Datepickers() {
     >
       {({ startDateInputProps, endDateInputProps, focus }) => (
         <>
-          <div className="text-left">
+          <div className=" text-center pr-20 md:text-left">
             <span className="text-[12px] text-[rgb(37, 48, 80)] font-avenir">
               Sélectionnez vos dates
             </span>
           </div>
           <div className="date-range flex">
             <div className="flex  justify-center items-center">
-              <div className="relative z-10 left-[142px] ">
+              <div className="relative z-10 left-[190px]  md:left-[142px] ">
                 <IoIosCalendar />
               </div>
             </div>
-            <input
-              className={
-                "input rounded-sm border border-gray-500 w-44" +
-                (focus === START_DATE ? " -focused" : "")
-              }
-              {...startDateInputProps}
-              placeholder="Arrivée"
-            />
-            <span className="date-range_arrow" />
-            <div className="flex  justify-center items-center">
-              <div className="relative left-[150px] z-10">
-                <IoIosCalendar />
+            <div className="flex  mx-auto">
+              <div className="-mr-4">
+                <input
+                  className={
+                    "input rounded-sm border border-gray-500 w-32 md:w-44" +
+                    (focus === START_DATE ? " -focused" : "")
+                  }
+                  {...startDateInputProps}
+                  placeholder="Arrivée"
+                />
               </div>
-              <input
-                className={
-                  "input  rounded-sm border border-gray-500 w-44" +
-                  (focus === END_DATE ? " -focused" : "")
-                }
-                {...endDateInputProps}
-                placeholder="Départ"
-              />
+              <span className="date-range_arrow" />
+              <div className="flex  justify-center items-center">
+                <div className="relative left-[110px] md:left-[150px] z-10">
+                  <IoIosCalendar />
+                </div>
+                <input
+                  className={
+                    "input  rounded-sm border border-gray-500 w-32 md:w-44" +
+                    (focus === END_DATE ? " -focused" : "")
+                  }
+                  {...endDateInputProps}
+                  placeholder="Départ"
+                />
+              </div>
             </div>
           </div>
         </>

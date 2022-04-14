@@ -27,29 +27,28 @@ function Datepickers() {
           </div>
           <div className="date-range flex">
             <div className="flex  justify-center items-center">
-              <div className="relative z-10 left-[190px]  md:left-[142px] ">
-                <IoIosCalendar />
+              <div className="relative left-[40px]  md:left-[142px] ">
+                <IoIosCalendar size="20" />
               </div>
             </div>
-            <div className="flex  mx-auto">
-              <div className="-mr-4">
-                <input
-                  className={
-                    "input rounded-sm border border-gray-500 w-32 md:w-44" +
-                    (focus === START_DATE ? " -focused" : "")
-                  }
-                  {...startDateInputProps}
-                  placeholder="Arrivée"
-                />
-              </div>
+            <div className="flex overflow-hidden">
+              <input
+                className={
+                  "input pl-16 rounded-sm border border-gray-500 w-32 md:w-44" +
+                  (focus === START_DATE ? " -focused" : "")
+                }
+                {...startDateInputProps}
+                placeholder="Arrivée"
+              />
+
               <span className="date-range_arrow" />
               <div className="flex  justify-center items-center">
-                <div className="relative left-[110px] md:left-[150px] z-10">
-                  <IoIosCalendar />
+                <div className="relative left-[40px] md:left-[150px] z-10">
+                  <IoIosCalendar size="20" />
                 </div>
                 <input
                   className={
-                    "input  rounded-sm border border-gray-500 w-32 md:w-44" +
+                    "input pl-16  rounded-sm border border-gray-500 w-32 md:w-44" +
                     (focus === END_DATE ? " -focused" : "")
                   }
                   {...endDateInputProps}

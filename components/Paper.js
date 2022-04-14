@@ -9,7 +9,7 @@ export default function PaperNav() {
       sx={{
         display: "flex",
         "& > :not(style)": {
-          borderRadius: 10,
+          borderRadius: 4,
           width: {
             xs: 500,
             sm: 700,

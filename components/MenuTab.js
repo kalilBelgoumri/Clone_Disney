@@ -5,6 +5,7 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import DatePickers from "./DatePickers";
+import ComboBox from "./Autocomplete";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -46,7 +47,7 @@ export default function MenuTab() {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ width: "100%", maxHeight: "100vh", height: "auto" }}>
       <Box
         sx={{
           borderBottom: 1,
@@ -83,9 +84,15 @@ export default function MenuTab() {
           />
         </Tabs>
       </Box>
-      <TabPanel value={value} index={0}>
-        <div className="text-center">
+      <TabPanel
+        className="flex justify-center flex-col md:flex-row md:justify-start"
+        value={value}
+        index={0}
+      >
+        <div className="flex flex-col justify-center items-center gap-5 md:flex-row ">
           <DatePickers />
+          <ComboBox />
+          <ComboBox />
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>

@@ -103,7 +103,13 @@ export default function MenuTab() {
           <DatePickers />
 
           <ComboBox
-            label={datas.map((data) => data.hotel)}
+            label={datas.map((data) => (
+              <>
+                <ul>
+                  <li key={data.id}>{data.hotel}</li>
+                </ul>
+              </>
+            ))}
             year="1995"
             label1="Hotel"
           />

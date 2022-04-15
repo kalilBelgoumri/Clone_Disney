@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import DatePickers from "./DatePickers";
 import ComboBox from "./Autocomplete";
 import datas from "../data/Datas";
+import { useId } from "react";
 function TabPanel({ children, value, index, ...other }) {
   return (
     <div
@@ -44,6 +45,8 @@ export default function MenuTab() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  const hotel = useId();
 
   return (
     <Box sx={{ width: "100%", maxHeight: "100vh", height: "auto" }}>
@@ -103,17 +106,10 @@ export default function MenuTab() {
           <DatePickers />
 
           <ComboBox
-            label={datas.map((data) => (
-              <>
-                <ul>
-                  <li key={data.id}>{data.hotel}</li>
-                </ul>
-              </>
-            ))}
-            year="1995"
-            label1="Hotel"
+            options={datas.map((item) => item.hotel)}
+            label="Tous les hôtels"
           />
-          <ComboBox label="test" year="1995" label1="1 chambre/2 visiteurs" />
+          <ComboBox label="test" label1="1 chambre/2 visiteurs" />
           <button
             id="btnR"
             className="rounded-full text-white font-avenir px-8 py-2 text-sm cursor-pointer  border focus:bg-blue-500"

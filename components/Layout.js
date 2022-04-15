@@ -11,6 +11,9 @@ import Link from "next/link";
 import { useRef } from "react";
 import download from "../public/download.svg";
 import PaperNav from "./Paper";
+import { Container } from "@mui/material";
+import mickey from "../public/family-shoot-mickey-newport-bay-club_.jpg";
+import mickey1 from "../public/world_disney-premier-access-screen.jpg";
 
 export default function Layout({ children, title }) {
   const router = useRouter();
@@ -142,6 +145,29 @@ export default function Layout({ children, title }) {
       <div className="flex justify-center">
         <h1 className="text-2xl">En ce moment à Disneyland Paris</h1>
       </div>
+
+      <Container maxWidth="sm">
+        <div className="grid grid-cols-2 gap-4 place-items-center">
+          <div className="grid">
+            <Image
+              className="rounded-lg"
+              src={mickey}
+              priority="responsive"
+              alt="mickey"
+            />
+          </div>
+          <div className="grid">
+            <Image
+              className="rounded-lg w-44 "
+              src={mickey1}
+              priority="responsive"
+              // width={500}
+              // height={280}
+              alt="mickey"
+            />
+          </div>
+        </div>
+      </Container>
       <main>{children}</main>
     </>
   );

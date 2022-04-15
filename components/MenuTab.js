@@ -135,7 +135,7 @@ export default function MenuTab() {
             <p>Vous cherchez la date idéale ?</p>
 
             <p
-              className="cursor-pointer text-xs text-blue-700 hover:border-b-2 hover:border-blue-700"
+              className="cursor-pointer text-xs overflow-y-hidden text-blue-700 hover:border-b-2 hover:border-blue-700"
               onClick={() => router.push("/")}
             >
               Comparez les prix

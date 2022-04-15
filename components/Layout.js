@@ -139,6 +139,9 @@ export default function Layout({ children, title }) {
       <div className="flex justify-center relative bottom-32 px-10">
         <PaperNav />
       </div>
+      <div className="flex justify-center">
+        <h1 className="text-2xl">En ce moment à Disneyland Paris</h1>
+      </div>
       <main>{children}</main>
     </>
   );

@@ -115,7 +115,7 @@ export default function MenuTab() {
               Chambres et visiteurs
             </span>
           </div>
-          <div className="flex gap-5 items-center md:flex-row md:items-center ">
+          <div className="flex flex-col gap-5 items-center xl:flex-row md:items-center ">
             <DatePickers />
 
             <ComboBox

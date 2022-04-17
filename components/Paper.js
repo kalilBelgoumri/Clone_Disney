@@ -11,8 +11,8 @@ export default function PaperNav() {
         "& > :not(style)": {
           borderRadius: 4,
           width: {
-            xs: 500,
-            sm: 700,
+            xs: 350,
+            sm: 600,
             md: 700,
             lg: 1000,
             xl: 1200,

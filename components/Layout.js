@@ -139,7 +139,7 @@ export default function Layout({ children, title }) {
         <Image src={download} priority="responsive" alt="download" />
       </div> */}
 
-      <div className="flex justify-center relative bottom-28 px-10">
+      <div className="flex justify-center relative bottom-28">
         <PaperNav />
       </div>
       <div className="flex justify-center">

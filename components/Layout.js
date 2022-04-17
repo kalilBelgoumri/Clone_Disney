@@ -139,32 +139,44 @@ export default function Layout({ children, title }) {
         <Image src={download} priority="responsive" alt="download" />
       </div> */}
 
-      <div className="flex justify-center relative bottom-32 px-10">
+      <div className="flex justify-center relative bottom-28 px-10">
         <PaperNav />
       </div>
       <div className="flex justify-center">
         <h1 className="text-2xl">En ce moment à Disneyland Paris</h1>
       </div>
 
-      <Container maxWidth="sm">
-        <div className="grid grid-cols-2 gap-4 place-items-center">
-          <div className="grid">
+      <Container maxWidth="lg" className="mt-5">
+        <div className="flex gap-5 justify-center flex-col lg:flex-row">
+          <div className="flex">
             <Image
               className="rounded-lg"
               src={mickey}
               priority="responsive"
               alt="mickey"
             />
+            {/* <h1>Découvrez nos prix du moment</h1>
+            <p>
+              Et évadez-vous le temps d’un séjour magique au Coeur du 30e
+              Anniversaire !
+            </p> */}
           </div>
           <div className="grid">
             <Image
-              className="rounded-lg w-44 "
+              className="rounded-lg"
               src={mickey1}
               priority="responsive"
               // width={500}
               // height={280}
               alt="mickey"
             />
+            {/* <h1>Disney Premier Access</h1>
+            <p>
+              Évitez la file à certaines de nos attractions les plus populaires
+              grâce à un accès rapide par la file dédiée Disney Premier Access
+              (accès rapide aux attractions), à partir de 5 € par personne et
+              par attraction en semaine. Quantités limitées !
+            </p> */}
           </div>
         </div>
       </Container>

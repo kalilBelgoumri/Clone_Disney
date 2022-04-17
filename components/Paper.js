@@ -10,12 +10,11 @@ export default function PaperNav() {
         display: "flex",
         "& > :not(style)": {
           borderRadius: 4,
-          width: {
-            xs: 350,
+          minWidth: {
+            xs: 300,
             sm: 600,
-            md: 700,
-            lg: 1000,
-            xl: 1200,
+            md: 768,
+            lg: 1020,
           },
 
           heigh: {

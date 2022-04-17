@@ -10,6 +10,7 @@ import datas from "../data/Datas";
 import { useId } from "react";
 import CardAutocomplete from "./CardAutocomplete";
 import { useRouter } from "next/router";
+import { Container } from "@mui/material";
 function TabPanel({ children, value, index, ...other }) {
   return (
     <div
@@ -105,17 +106,17 @@ export default function MenuTab() {
           index={0}
         >
           <div className="flex-col mb-5 flex justify-around relative">
-            <span className="absolute text-[12px] left-[26px] flex text-[rgb(37, 48, 80)] font-avenir">
+            <div className="absolute text-[12px] left-[30px]   flex text-[rgb(37, 48, 80)] font-avenir">
               Sélectionnez vos dates
-            </span>
-            <span className="absolute text-[12px] left-[426px] flex text-[rgb(37, 48, 80)] font-avenir">
+            </div>
+            <div className="absolute left-[30px] top-[80px] xl:top-0 md:left-[33px] lg:left-[390px]  text-[12px] xl:left-[390px] flex text-[rgb(37, 48, 80)] font-avenir">
               Hôtels et Resorts
-            </span>
-            <span className="absolute right-[294px] text-[12px] flex text-[rgb(37, 48, 80)] font-avenir">
+            </div>
+            <div className="absolute top-[163px] md:right-[334px] xl:top-0 right-[188px] text-[12px] flex text-[rgb(37, 48, 80)] font-avenir">
               Chambres et visiteurs
-            </span>
+            </div>
           </div>
-          <div className="flex flex-col gap-5 items-center xl:flex-row md:items-center ">
+          <div className="flex flex-col gap-10 items-center xl:flex-row md:items-center ">
             <DatePickers />
 
             <ComboBox
@@ -131,6 +132,7 @@ export default function MenuTab() {
               Réserver
             </button>
           </div>
+
           <div className="flex justify-center mt-12 text-xs">
             <p>Vous cherchez la date idéale ?</p>
 

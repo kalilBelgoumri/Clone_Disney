@@ -22,19 +22,21 @@ function Datepickers() {
         <>
           <div className="date-range flex">
             <div className="flex  justify-center items-center">
-              <div className="relative left-[40px]  md:left-[30px] ">
+              <div className="relative left-[38px]  md:left-[30px] ">
                 <IoIosCalendar size="25" color="rgb(37, 48, 80)" />
               </div>
             </div>
-            <div className="flex  overflow-hidden">
-              <input
-                className={
-                  "input pl-10 rounded-sm border border-gray-500 w-32 md:w-44" +
-                  (focus === START_DATE ? " -focused" : "")
-                }
-                {...startDateInputProps}
-                placeholder="Arrivée"
-              />
+            <div className="flex mr-5">
+              <div className="-mr-8 flex">
+                <input
+                  className={
+                    "input pl-10 rounded-sm border border-gray-500 w-[152px] " +
+                    (focus === START_DATE ? " -focused" : "")
+                  }
+                  {...startDateInputProps}
+                  placeholder="Arrivée"
+                />
+              </div>
 
               <span className="date-range_arrow" />
               <div className="flex  justify-center items-center">
@@ -43,7 +45,7 @@ function Datepickers() {
                 </div>
                 <input
                   className={
-                    "input pl-10  rounded-sm border border-gray-500 w-32 md:w-44" +
+                    "input pl-10  rounded-sm border border-gray-500 w-[152px] " +
                     (focus === END_DATE ? " -focused" : "")
                   }
                   {...endDateInputProps}

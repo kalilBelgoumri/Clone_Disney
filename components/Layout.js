@@ -146,7 +146,7 @@ export default function Layout({ children, title }) {
         <h1 className="text-2xl">En ce moment à Disneyland Paris</h1>
       </div>
 
-      <Container maxWidth="lg" className="mt-5">
+      <Container maxWidth="md" className="mt-5">
         <div className="flex gap-5 justify-center flex-col lg:flex-row">
           <div className="flex">
             <Image

@@ -105,18 +105,18 @@ export default function MenuTab() {
           value={value}
           index={0}
         >
-          <div className="flex-col mb-5 flex justify-around relative">
-            <div className="absolute text-[12px] left-[30px]   flex text-[rgb(37, 48, 80)] font-avenir">
+          <div className="relative mb-5 flex flex-col justify-around">
+            <div className="text-[rgb(37, 48, 80)] absolute  left-[30px] flex font-avenir text-[12px] sm:left-[133px] md:left-[137px] lg:left-[40px]">
               Sélectionnez vos dates
             </div>
-            <div className="absolute left-[30px] top-[80px] xl:top-0 md:left-[33px] lg:left-[390px]  text-[12px] xl:left-[390px] flex text-[rgb(37, 48, 80)] font-avenir">
+            <div className="text-[rgb(37, 48, 80)] absolute left-[30px] top-[80px] flex  font-avenir text-[12px] sm:left-[133px] md:left-[137px] lg:left-[392px] lg:top-0">
               Hôtels et Resorts
             </div>
-            <div className="absolute top-[163px] md:right-[334px] xl:top-0 right-[188px] text-[12px] flex text-[rgb(37, 48, 80)] font-avenir">
+            <div className="text-[rgb(37, 48, 80)] absolute top-[163px] right-[188px] flex font-avenir text-[12px] sm:right-[293px] md:right-[288px] lg:top-0 lg:right-[496px]">
               Chambres et visiteurs
             </div>
           </div>
-          <div className="flex flex-col gap-10 items-center xl:flex-row md:items-center ">
+          <div className="flex flex-col items-center gap-10  md:items-center xl:flex-row ">
             <DatePickers />
 
             <ComboBox
@@ -126,18 +126,18 @@ export default function MenuTab() {
             <ComboBox options={datas.map((item) => item.hotel)} label="test" />
             <button
               id="btnR"
-              className="rounded-full text-white font-avenir px-8 py-2 text-sm cursor-pointer  border focus:bg-blue-500"
+              className="cursor-pointer rounded-full border px-8 py-2 font-avenir text-sm  text-white focus:bg-blue-500"
               type="submit"
             >
               Réserver
             </button>
           </div>
 
-          <div className="flex justify-center mt-12 text-xs">
+          <div className="mt-12 flex justify-center text-xs">
             <p>Vous cherchez la date idéale ?</p>
 
             <p
-              className="cursor-pointer text-xs overflow-y-hidden text-blue-700 hover:border-b-2 hover:border-blue-700"
+              className="cursor-pointer overflow-y-hidden text-xs text-blue-700 hover:border-b-2 hover:border-blue-700"
               onClick={() => router.push("/")}
             >
               Comparez les prix

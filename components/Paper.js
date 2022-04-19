@@ -11,10 +11,11 @@ export default function PaperNav() {
         "& > :not(style)": {
           borderRadius: 4,
           minWidth: {
-            xs: 300,
-            sm: 600,
+            xs: 0,
+            sm: 640,
             md: 768,
             lg: 1020,
+            xl: 1400,
           },
 
           heigh: {
@@ -26,7 +27,7 @@ export default function PaperNav() {
         },
       }}
     >
-      <Paper className="flex justify-center items-center" variant="outlined">
+      <Paper className="flex items-center justify-center" variant="outlined">
         <MenuTab />
       </Paper>
     </Box>

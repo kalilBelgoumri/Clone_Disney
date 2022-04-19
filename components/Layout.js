@@ -37,14 +37,14 @@ export default function Layout({ children, title }) {
       </Head>
       {/* Background */}
 
-      <div className="h-14 w-full flex items-center md:justify-center md:h-28 shadow-2xl ">
-        <div className="flex flex-col items-center ml-3 md:hidden">
+      <div className="flex h-14 w-full items-center shadow-2xl md:h-28 md:justify-center ">
+        <div className="ml-3 flex flex-col items-center md:hidden">
           <HamburgerMenu />
           <span className="text-[10px]">Menu</span>
         </div>
 
         {/* Logo */}
-        <div className="flex mx-auto md:mb-12">
+        <div className="mx-auto flex md:mb-12">
           <Image
             width={isTabletOrMobile ? 160 : 150}
             className="cursor-pointer "
@@ -54,7 +54,7 @@ export default function Layout({ children, title }) {
             onClick={() => router.push("/")}
           />
         </div>
-        <div className="hidden md:flex absolute mt-12">
+        <div className="absolute mt-12 hidden md:flex">
           <Link href="/billet">
             <a
               onMouseEnter={"active"}
@@ -111,7 +111,7 @@ export default function Layout({ children, title }) {
           </Link>
         </div>
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex items-center justify-center">
         <span ref={testRef} />
       </div>
 
@@ -139,47 +139,50 @@ export default function Layout({ children, title }) {
         <Image src={download} priority="responsive" alt="download" />
       </div> */}
 
-      <div className="flex justify-center relative bottom-28">
+      <div className="relative bottom-28 flex justify-center">
         <PaperNav />
       </div>
       <div className="flex justify-center">
         <h1 className="text-2xl">En ce moment à Disneyland Paris</h1>
       </div>
-
       <Container maxWidth="md" className="mt-5">
-        <div className="flex gap-5 justify-center flex-col lg:flex-row">
-          <div className="flex">
+        <div className="flex flex-col items-center justify-center gap-10 overflow-hidden lg:flex-row">
+          <div className="flex flex-col">
             <Image
               className="rounded-lg"
               src={mickey}
               priority="responsive"
               alt="mickey"
             />
-            {/* <h1>Découvrez nos prix du moment</h1>
-            <p>
-              Et évadez-vous le temps d’un séjour magique au Coeur du 30e
-              Anniversaire !
-            </p> */}
+            <div className="mt-7 flex flex-col">
+              <p>Découvrez nos prix du moment</p>
+              <p className="mt-4 text-[12px]">
+                Et évadez-vous le temps d’un séjour magique au Coeur du 30e
+                Anniversaire !
+              </p>
+            </div>
           </div>
-          <div className="grid">
+          <div className="flex flex-col ">
             <Image
               className="rounded-lg"
               src={mickey1}
               priority="responsive"
-              // width={500}
-              // height={280}
               alt="mickey"
             />
-            {/* <h1>Disney Premier Access</h1>
-            <p>
-              Évitez la file à certaines de nos attractions les plus populaires
-              grâce à un accès rapide par la file dédiée Disney Premier Access
-              (accès rapide aux attractions), à partir de 5 € par personne et
-              par attraction en semaine. Quantités limitées !
-            </p> */}
+
+            <div className="mt-7 flex flex-col">
+              <p>Disney Premier Access</p>
+              <p className="text-[rgb(37, 48, 80)] mt-4 text-[12px]">
+                Évitez la file à certaines de nos attractions les plus
+                populaires grâce à un accès rapide par la file dédiée Disney
+                Premier Access (accès rapide aux attractions), à partir de 5 €
+                par personne et par attraction en semaine. Quantités limitées !
+              </p>
+            </div>
           </div>
         </div>
       </Container>
+
       <main>{children}</main>
     </>
   );

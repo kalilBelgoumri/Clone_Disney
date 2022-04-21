@@ -15,7 +15,7 @@ export default function PaperNav() {
             sm: 640,
             md: 768,
             lg: 1020,
-            xl: 1400,
+            xl: 1200,
           },
 
           heigh: {

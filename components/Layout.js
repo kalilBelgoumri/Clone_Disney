@@ -135,14 +135,11 @@ export default function Layout({ children, title }) {
           alt="background"
         />
       )}
-      {/* <div className="absolute top-[172vh]">
-        <Image src={download} priority="responsive" alt="download" />
-      </div> */}
 
       <div className="relative bottom-28 flex justify-center">
         <PaperNav />
       </div>
-      <div className="flex justify-center">
+      <div className="-mb-5 flex justify-center">
         <h1 className="text-2xl">En ce moment à Disneyland Paris</h1>
       </div>
       <Container maxWidth="md" className="mt-7">
@@ -161,7 +158,7 @@ export default function Layout({ children, title }) {
                 Anniversaire !
               </p>
             </div>
-            <div className="my-10 flex items-center justify-center">
+            <div className="mt-16 flex items-center justify-center">
               <button
                 className="rounded-full border-2 border-[#0046E4] py-1 px-16 text-[#0046E4] "
                 type="submit"

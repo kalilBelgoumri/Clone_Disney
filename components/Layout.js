@@ -16,6 +16,7 @@ import MainOne from "./main/MainOne";
 import MainTwo from "./main/MainTwo";
 import Divider from "@mui/material/Divider";
 import separator from "../..../../public/separator.png";
+import MainThree from "./main/MainThree";
 
 export default function Layout({ children, title }) {
   const router = useRouter();
@@ -157,6 +158,11 @@ export default function Layout({ children, title }) {
       <div className="mt-10">
         <Image src={separator} sizes="100%" Layout="responsive" alt="mickey" />
       </div>
+
+      {/* MainThree */}
+      <Container maxWidth="md" className="mt-14">
+        <MainThree />
+      </Container>
 
       <main>{children}</main>
     </>

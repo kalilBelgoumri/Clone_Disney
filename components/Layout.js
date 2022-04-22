@@ -14,6 +14,8 @@ import PaperNav from "./Paper";
 import { Container } from "@mui/material";
 import MainOne from "./main/MainOne";
 import MainTwo from "./main/MainTwo";
+import Divider from "@mui/material/Divider";
+import separator from "../..../../public/separator.png";
 
 export default function Layout({ children, title }) {
   const router = useRouter();
@@ -143,12 +145,18 @@ export default function Layout({ children, title }) {
         <h1 className="text-2xl">En ce moment à Disneyland Paris</h1>
       </div>
       <Container maxWidth="md" className="mt-7">
+        {/* MainTwo */}
         <MainOne />
       </Container>
-
-      <Container className='mt-14' maxWidth="md">
+      {/* MainTwo */}
+      <Container className="mt-14" maxWidth="md">
         <MainTwo />
       </Container>
+
+      {/* Divider */}
+      <div className="mt-10">
+        <Image src={separator} sizes="100%" Layout="responsive" alt="mickey" />
+      </div>
 
       <main>{children}</main>
     </>

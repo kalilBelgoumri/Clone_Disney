@@ -13,12 +13,12 @@ function MainTwo() {
           alt="mickey"
         />
 
-        <div className="mt-16 flex items-center justify-center">
+        <div className="mt-16 flex items-center justify-end">
           <button
-            className="rounded-full border-2 border-[#0046E4] py-1 px-16 text-[#0046E4] "
+            className="rounded-full border-2 bg-gradient-to-r from-[#022CA5] via-[#0539d4] to-[#3959bb] py-2 px-4 "
             type="submit"
           >
-            Acheter un billet
+            <span className="text-white">Acheter un billet</span>
           </button>
         </div>
       </div>
@@ -37,16 +37,15 @@ function MainTwo() {
             Paris !
           </p>
         </div>
-        <div className="mt-24 flex items-center justify-center">
+        <div className=" flex items-center justify-start self-end">
           <button
-            className="rounded-full border-2 border-[#0046E4] py-1 px-14 text-[#0046E4] "
+            className="rounded-full border-2 border-[#0046E4] py-2 px-4 text-[#0046E4] "
             type="submit"
           >
             <span className="text-bold text-md">Enregistrer ma visite</span>
           </button>
         </div>
       </div>
-    
     </div>
   );
 }

@@ -17,6 +17,7 @@ import MainTwo from "./main/MainTwo";
 import Divider from "@mui/material/Divider";
 import separator from "../..../../public/separator.png";
 import MainThree from "./main/MainThree";
+import CardMainThree from "./CardMainThree";
 
 export default function Layout({ children, title }) {
   const router = useRouter();
@@ -162,6 +163,11 @@ export default function Layout({ children, title }) {
       {/* MainThree */}
       <Container maxWidth="md" className="mt-14">
         <MainThree />
+        <CardMainThree
+          image={background}
+          typo="text"
+          button={<button type="submit"> Envoyer </button>}
+        />
       </Container>
 
       <main>{children}</main>

@@ -8,7 +8,7 @@ import { useMediaQuery } from "react-responsive";
 import HamburgerMenu from "./HamburgerMenu";
 import Navbar from "./Navbar";
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import download from "../public/download.svg";
 import PaperNav from "./Paper";
 import { Container } from "@mui/material";
@@ -18,7 +18,7 @@ import Divider from "@mui/material/Divider";
 import separator from "../..../../public/separator.png";
 import MainThree from "./main/MainThree";
 import CardMainThree from "./CardMainThree";
-
+import DatasMain from "../data/DatasMain";
 export default function Layout({ children, title }) {
   const router = useRouter();
   const isTabletOrMobile = useMediaQuery({ query: "(min-width: 778px)" });
@@ -163,14 +163,31 @@ export default function Layout({ children, title }) {
       {/* MainThree */}
       <Container maxWidth="md" className="mt-14">
         <MainThree />
-        <CardMainThree
-          image={background}
-          typo="text"
-          button={<button type="submit"> Envoyer </button>}
-        />
+        <div className="flex justify-center gap-5">
+          {DatasMain?.map((data) => (
+            <div key={data.id} className="flex">
+              <CardMainThree
+                image={data.url}
+                typo="text"
+                button={<button type="submit"> Envoyer </button>}
+              />
+            </div>
+          ))}
+        </div>
       </Container>
 
       <main>{children}</main>
     </>
   );
 }
+
+// This also gets called at build time
+export async function getStaticProps() {
+  const res = await fetch(`../data/DatasMain`);
+  const DatasMain = await res.json();
+
+  // Pass post data to the page via props
+  return { props: { DatasMain } };
+}
+
+console.log(DatasMain);

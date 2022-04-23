@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import * as React from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -10,7 +11,7 @@ import Image from "next/image";
 export default function CardMainThree({ image, button, typo }) {
   return (
     <Card sx={{ maxWidth: 345, borderRadius: 3 }}>
-      <Image id="test" src={image} layout="responsive" alt="test" />
+      <img id="test" src={image} alt="test" />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           {typo}

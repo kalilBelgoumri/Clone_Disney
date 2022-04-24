@@ -8,7 +8,7 @@ import { useMediaQuery } from "react-responsive";
 import HamburgerMenu from "./HamburgerMenu";
 import Navbar from "./Navbar";
 import Link from "next/link";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useLayoutEffect } from "react";
 import download from "../public/download.svg";
 import PaperNav from "./Paper";
 import { Container } from "@mui/material";
@@ -25,6 +25,13 @@ export default function Layout({ children, title }) {
   const router = useRouter();
   const isTabletOrMobile = useMediaQuery({ query: "(min-width: 778px)" });
   const testRef = useRef(null);
+
+  // function handleBackClick() {
+  //   arrowRef.current.scrollTo({
+  //     left: 100,
+  //     behavior: "smooth",
+  //   });
+  // }
 
   const mouseOk = () => {
     testRef.current.classList.add("test");
@@ -163,9 +170,9 @@ export default function Layout({ children, title }) {
       </div>
 
       {/* MainThree */}
-      <Container maxWidth="lg" className="mt-14">
+      <Container maxWidth="xl" className="mt-14">
         <MainThree />
-        <div className="relative mt-16 flex flex-col items-center justify-center  overflow-x-auto  pb-10 pl-32 pr-5 scrollbar-hide">
+        <div className="relative mt-16 flex flex-col items-center justify-center  overflow-x-auto  pb-10 pl-[24vw] pr-5 scrollbar-hide">
           <div className=" flex snap-x justify-center gap-5">
             {/* Arrow Left */}
             <div className="absolute left-[13px] top-[241px] flex">

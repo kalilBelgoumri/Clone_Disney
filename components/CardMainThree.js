@@ -16,7 +16,7 @@ export default function CardMainThree({
   typo,
 }) {
   return (
-    <Card className={className} sx={{ width: 300, borderRadius: 3 }}>
+    <Card sx={{ width: 300, borderRadius: 3 }}>
       <img id="test" src={image} alt="test" />
       <CardContent>
         <h1> {typo1} </h1>

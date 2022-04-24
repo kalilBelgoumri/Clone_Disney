@@ -6,8 +6,6 @@ const datasMain = [
     title: `30e Anniversaire de Disneyland Paris`,
     description: `Êtes-vous prêts à prendre part à une incroyable célébration ? Après 30 années de rêve, la magie ne fait que commencer !`,
     url: "../DLP.jpg",
-    width: "100%",
-    height: "100%",
     btn: `En savoir plus`,
   },
   {

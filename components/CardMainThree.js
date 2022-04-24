@@ -8,18 +8,25 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 
-export default function CardMainThree({ image, button, typo }) {
+export default function CardMainThree({
+  className,
+  image,
+  typo1,
+  button,
+  typo,
+}) {
   return (
-    <Card sx={{ maxWidth: 345, borderRadius: 3 }}>
+    <Card className={className} sx={{ width: 300, borderRadius: 3 }}>
       <img id="test" src={image} alt="test" />
       <CardContent>
+        <h1> {typo1} </h1>
         <Typography variant="body2" color="text.secondary">
           {typo}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button> {button} </Button>
-      </CardActions>
+      <div className="flex justify-center">
+        <CardActions>{button}</CardActions>
+      </div>
     </Card>
   );
 }

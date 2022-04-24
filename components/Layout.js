@@ -161,17 +161,24 @@ export default function Layout({ children, title }) {
       </div>
 
       {/* MainThree */}
-      <Container maxWidth="md" className="mt-14">
+      <Container maxWidth="lg" className="mt-14">
         <MainThree />
-        <div className="flex justify-center gap-5">
+
+        <div className="mt-10 flex   justify-center gap-5 overflow-x-auto">
           {DatasMain?.map((data) => (
-            <div key={data.id} className="flex">
+            <ul key={data.id} className="flex snap-x snap-mandatory ">
               <CardMainThree
+                className="snap-center snap-always"
                 image={data.url}
-                typo="text"
-                button={<button type="submit"> Envoyer </button>}
+                typo1={data.title}
+                typo={data.description}
+                button={
+                  <span className="rounded-full border-2 border-blue-800 px-5 py-2">
+                    {data.btn}
+                  </span>
+                }
               />
-            </div>
+            </ul>
           ))}
         </div>
       </Container>

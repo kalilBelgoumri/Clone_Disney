@@ -21,6 +21,7 @@ import CardMainThree from "./CardMainThree";
 import DatasMain from "../data/DatasMain";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import word from "/public/world_triptyque-disneyland-paris.jpg";
+import word1 from "/public/world_triptyque-disneyland-paris-wds-.jpg";
 
 export default function Layout({ children, title }) {
   const router = useRouter();
@@ -216,7 +217,11 @@ export default function Layout({ children, title }) {
         }}
         maxWidth="xl"
       >
-        <Image src={word} alt="test" layout="responsive" />
+        {isTabletOrMobile ? (
+          <Image src={word} alt="test" layout="responsive" />
+        ) : (
+          <Image src={word1} alt="test" layout="responsive" />
+        )}
         <span className="mt-5 text-center text-lg text-[#253050]">
           Nos deux Parcs : le,
           <span

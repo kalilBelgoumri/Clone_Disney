@@ -22,6 +22,7 @@ import DatasMain from "../data/DatasMain";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import word from "/public/world_triptyque-disneyland-paris.jpg";
 import word1 from "/public/world_triptyque-disneyland-paris-wds-.jpg";
+import MainFaure from "./main/MainFaure";
 
 export default function Layout({ children, title }) {
   const router = useRouter();
@@ -210,6 +211,8 @@ export default function Layout({ children, title }) {
           </div>
         </div>
       </Container>
+      {/* MainFaure */}
+
       <Container
         sx={{
           display: "grid",
@@ -217,35 +220,13 @@ export default function Layout({ children, title }) {
         }}
         maxWidth="xl"
       >
-        {isTabletOrMobile ? (
-          <Image src={word} alt="test" layout="responsive" />
-        ) : (
-          <Image src={word1} alt="test" layout="responsive" />
-        )}
-        <span className="mt-5 text-center text-lg text-[#253050]">
-          Nos deux Parcs : le,
-          <span
-            className="cursor-pointer text-blue-400"
-            onClick={() => router.push("/")}
-          >
-            Parc Disneyland
-          </span>
-          , le
-          <span
-            className="cursor-pointer text-blue-400"
-            onClick={() => router.push("/")}
-          >
-            Parc Walt Disney Studios
-          </span>{" "}
-          , et les boutiques, bars, restaurants et cinéma du{" "}
-          <span
-            className="cursor-pointer text-blue-400"
-            onClick={() => router.push("/")}
-          >
-            Disney Village.
-          </span>
+        <MainFaure />
+        {/* MainFive */}
+        <span className="mt-20 text-center text-[24px] text-[#202249]">
+          Planifiez une journée qui vous ressemble
         </span>
       </Container>
+
       <main>{children}</main>
     </>
   );

@@ -20,6 +20,7 @@ import MainThree from "./main/MainThree";
 import CardMainThree from "./CardMainThree";
 import DatasMain from "../data/DatasMain";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import word from "/public/world_triptyque-disneyland-paris.jpg";
 
 export default function Layout({ children, title }) {
   const router = useRouter();
@@ -208,7 +209,9 @@ export default function Layout({ children, title }) {
           </div>
         </div>
       </Container>
-
+      <Container maxWidth="xl">
+        <Image src={word} alt="test" layout="responsive" />
+      </Container>
       <main>{children}</main>
     </>
   );

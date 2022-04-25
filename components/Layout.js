@@ -209,8 +209,37 @@ export default function Layout({ children, title }) {
           </div>
         </div>
       </Container>
-      <Container maxWidth="xl">
+      <Container
+        sx={{
+          display: "grid",
+          alignItems: "center",
+        }}
+        maxWidth="xl"
+      >
         <Image src={word} alt="test" layout="responsive" />
+        <span className="mt-5 text-center text-lg text-[#253050]">
+          Nos deux Parcs : le,
+          <span
+            className="cursor-pointer text-blue-400"
+            onClick={() => router.push("/")}
+          >
+            Parc Disneyland
+          </span>
+          , le
+          <span
+            className="cursor-pointer text-blue-400"
+            onClick={() => router.push("/")}
+          >
+            Parc Walt Disney Studios
+          </span>{" "}
+          , et les boutiques, bars, restaurants et cinéma du{" "}
+          <span
+            className="cursor-pointer text-blue-400"
+            onClick={() => router.push("/")}
+          >
+            Disney Village.
+          </span>
+        </span>
       </Container>
       <main>{children}</main>
     </>

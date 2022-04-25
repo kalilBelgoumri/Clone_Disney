@@ -20,9 +20,8 @@ import MainThree from "./main/MainThree";
 import CardMainThree from "./CardMainThree";
 import DatasMain from "../data/DatasMain";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
-import word from "/public/world_triptyque-disneyland-paris.jpg";
-import word1 from "/public/world_triptyque-disneyland-paris-wds-.jpg";
 import MainFaure from "./main/MainFaure";
+import MainFiveCard from "./MainFiveCard";
 
 export default function Layout({ children, title }) {
   const router = useRouter();
@@ -212,7 +211,6 @@ export default function Layout({ children, title }) {
         </div>
       </Container>
       {/* MainFaure */}
-
       <Container
         sx={{
           display: "grid",
@@ -222,9 +220,7 @@ export default function Layout({ children, title }) {
       >
         <MainFaure />
         {/* MainFive */}
-        <span className="mt-20 text-center text-[24px] text-[#202249]">
-          Planifiez une journée qui vous ressemble
-        </span>
+        <MainFiveCard />
       </Container>
 
       <main>{children}</main>

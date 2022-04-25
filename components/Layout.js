@@ -15,7 +15,8 @@ import { Container } from "@mui/material";
 import MainOne from "./main/MainOne";
 import MainTwo from "./main/MainTwo";
 import Divider from "@mui/material/Divider";
-import separator from "../..../../public/separator.png";
+import separator from "../public/separator.png";
+import separator1 from "../public/icon-e000-disney-hotels_separator-line-grey_desktop_tcm808-222787.png";
 import MainThree from "./main/MainThree";
 import CardMainThree from "./CardMainThree";
 import DatasMain from "../data/DatasMain";
@@ -222,6 +223,9 @@ export default function Layout({ children, title }) {
         {/* MainFive */}
         <MainFiveCard />
       </Container>
+      <div className="mt-10">
+        <Image src={separator1} sizes="100%" Layout="responsive" alt="mickey" />
+      </div>
 
       <main>{children}</main>
     </>

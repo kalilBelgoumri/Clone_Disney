@@ -7,7 +7,7 @@ import { Container } from "@mui/material";
 export default function MainFiveCard() {
   return (
     <>
-      <span className="mt-20 text-center text-[24px] text-[#202249] hover:shadow-2xl hover:transition-all">
+      <span className="mt-20 text-center text-[24px] text-[#202249]">
         Planifiez une journée qui vous ressemble
       </span>
       <div className="mt-5 flex items-center justify-center">
@@ -22,9 +22,9 @@ export default function MainFiveCard() {
               height: 130,
             },
           }}
-          className="flex flex-col items-center justify-center gap-10 rounded-lg  md:flex-row"
+          className="flex cursor-pointer flex-col items-center justify-center gap-10 rounded-xl  md:flex-row"
         >
-          <Paper elevation={4}>
+          <Paper elevation={4} className="hover:shadow-2xl">
             <div className="flex pl-2">
               <Image
                 className="rounded-lg"
@@ -50,7 +50,7 @@ export default function MainFiveCard() {
             </Container>
           </Paper>
 
-          <Paper elevation={4}>
+          <Paper elevation={4} className="hover:shadow-2xl">
             <div className="flex pl-2">
               <Image
                 className="rounded-lg"

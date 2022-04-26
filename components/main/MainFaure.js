@@ -3,9 +3,10 @@ import { useMediaQuery } from "react-responsive";
 import Image from "next/image";
 import word from "/public/world_triptyque-disneyland-paris.jpg";
 import word1 from "/public/world_triptyque-disneyland-paris-wds-.jpg";
+import { useRouter } from "next/router";
 function MainFaure() {
   const isTabletOrMobile = useMediaQuery({ query: "(min-width: 778px)" });
-
+  const router = useRouter();
   return (
     <>
       {isTabletOrMobile ? (

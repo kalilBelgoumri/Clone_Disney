@@ -3,8 +3,10 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Image from "next/image";
 import { Container } from "@mui/material";
+import { useRouter } from "next/router";
 
 export default function MainFiveCard() {
+  const router = useRouter();
   return (
     <>
       <span className="mt-20 text-center text-[24px] text-[#202249]">
@@ -20,11 +22,16 @@ export default function MainFiveCard() {
               alignItems: "center",
               width: 340,
               height: 130,
+              borderRadius: "15px",
             },
           }}
-          className="flex cursor-pointer flex-col items-center justify-center gap-10 rounded-xl  md:flex-row"
+          className="flex cursor-pointer flex-col items-center justify-center gap-10 md:flex-row"
         >
-          <Paper elevation={4} className="hover:shadow-2xl">
+          <Paper
+            onClick={() => router.push("/")}
+            elevation={4}
+            className="hover:shadow-2xl"
+          >
             <div className="flex pl-2">
               <Image
                 className="rounded-lg"
@@ -50,7 +57,11 @@ export default function MainFiveCard() {
             </Container>
           </Paper>
 
-          <Paper elevation={4} className="hover:shadow-2xl">
+          <Paper
+            onClick={() => router.push("/")}
+            elevation={4}
+            className="hover:shadow-2xl"
+          >
             <div className="flex pl-2">
               <Image
                 className="rounded-lg"

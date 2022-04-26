@@ -1,6 +1,6 @@
 import React from "react";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
-import CardMainThree from "../CardMainThree";
+import CardMainSix from "../CardMainSix";
 import datasMainSix from "../../data/DatasMainSix";
 import { BiWalk } from "react-icons/bi";
 
@@ -36,7 +36,7 @@ function MainSix() {
           </div>
           {datasMainSix?.map((data) => (
             <div key={data.id} className="flex ">
-              <CardMainThree
+              <CardMainSix
                 image={data.url}
                 typo1={data.title}
                 pieton={data.pieton}

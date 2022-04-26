@@ -2,6 +2,7 @@ import React from "react";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import CardMainThree from "../CardMainThree";
 import datasMainSix from "../../data/DatasMainSix";
+import { BiWalk } from "react-icons/bi";
 
 function MainSix() {
   return (
@@ -38,6 +39,8 @@ function MainSix() {
               <CardMainThree
                 image={data.url}
                 typo1={data.title}
+                pieton={data.pieton}
+                navette={data.navette}
                 typo={data.description}
                 button={
                   <span className="rounded-full border-2 border-blue-800 px-5 py-2">

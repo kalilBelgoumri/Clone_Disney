@@ -20,6 +20,7 @@ import separator1 from "../public/icon-e000-disney-hotels_separator-line-grey_de
 import MainThree from "./main/MainThree";
 import CardMainThree from "./CardMainThree";
 import DatasMain from "../data/DatasMain";
+import DatasMainSix from "../data/DatasMainSix";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import MainFaure from "./main/MainFaure";
 import MainFiveCard from "./MainFiveCard";
@@ -159,7 +160,7 @@ export default function Layout({ children, title }) {
         <h1 className="text-2xl">En ce moment à Disneyland Paris</h1>
       </div>
       <Container maxWidth="md" className="mt-7">
-        {/* MainTwo */}
+        {/* MainOne */}
         <MainOne />
       </Container>
       {/* MainTwo */}
@@ -232,13 +233,5 @@ export default function Layout({ children, title }) {
   );
 }
 
-// This also gets called at build time
-export async function getStaticProps() {
-  const res = await fetch(`../data/DatasMain`);
-  const DatasMain = await res.json();
-
-  // Pass post data to the page via props
-  return { props: { DatasMain } };
-}
-
 console.log(DatasMain);
+console.log(DatasMainSix);

@@ -39,12 +39,19 @@ function MainSeven() {
           réserver !
         </p>
       </div>
-      <div className="mt-10 flex justify-center ">
-        <div className="flex ">
-          {datasMainSeven.map((data) => (
+      <div className="mt-10 flex justify-center gap-8 ">
+        {datasMainSeven.map((data) => (
+          <span key={data.id}>
             <img className="w-52" key={data.id} src={data.url} alt="data" />
-          ))}
-        </div>
+            <div className="mt-10  ">
+              <p className=" w-52 "> {data.title} </p>
+              <p className="w-52 font-sans text-xs font-normal">
+                {" "}
+                {data.description}{" "}
+              </p>
+            </div>
+          </span>
+        ))}
       </div>
     </>
   );

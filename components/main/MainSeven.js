@@ -9,7 +9,7 @@ function MainSeven() {
       >
         <span className=" text-[#022CA5]">Comparer les prix</span>
       </button>
-
+      <div className="px-3" />
       <button
         className="rounded-full border-2 bg-gradient-to-r from-[#022CA5] via-[#0539d4] to-[#3959bb] py-2 px-4 "
         type="submit"

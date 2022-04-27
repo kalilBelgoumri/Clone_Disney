@@ -22,6 +22,7 @@ import CardMainThree from "./CardMainThree";
 import MainFaure from "./main/MainFaure";
 import MainFiveCard from "./MainFiveCard";
 import MainSix from "./main/MainSix";
+import MainSeven from "./main/MainSeven";
 
 export default function Layout({ children, title }) {
   const router = useRouter();
@@ -183,7 +184,6 @@ export default function Layout({ children, title }) {
         }}
         maxWidth="xl"
       >
-        {/* MainFaure */}
         <MainFaure />
         {/* MainFive */}
         <MainFiveCard />
@@ -191,11 +191,15 @@ export default function Layout({ children, title }) {
       <div className="mt-10">
         <Image src={separator1} sizes="100%" Layout="responsive" alt="mickey" />
       </div>
-
+      {/* MainSix */}
       <Container>
         <div className="flex flex-col justify-center text-center">
           <MainSix />
         </div>
+      </Container>
+      {/* MainSeven */}
+      <Container maxWidth="lg">
+        <MainSeven />
       </Container>
 
       <main>{children}</main>

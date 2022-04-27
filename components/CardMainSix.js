@@ -24,21 +24,23 @@ export default function CardMainSix({
       <img id="test" src={image} alt="test" />
       <CardContent>
         <h1> {typo1} </h1>
-        <div className="flex w-48 rounded-md border-2 border-gray-500 py-1 ">
-          <div className="pr-3">
-            <BiWalk />
+        <div className="flex flex-col items-start gap-3 py-5 pl-5">
+          <div className="flex w-48 rounded-md border-2 border-gray-500 py-1 ">
+            <div className="pr-3">
+              <BiWalk />
+            </div>
+            <span className="font-sans text-xs font-normal">{pieton}</span>
           </div>
-          <span className="font-sans text-xs font-normal">{pieton}</span>
-        </div>
-        <div className="flex w-48 rounded-md border-2 border-gray-500 py-1 ">
-          <div className="pr-3">
-            <FaBusAlt />
+          <div className="flex w-48 rounded-md border-2 border-gray-500 py-1 ">
+            <div className="pr-3">
+              <FaBusAlt />
+            </div>
+            <span className="font-sans text-xs font-normal"> {navette} </span>
           </div>
-          <span className="font-sans text-xs font-normal"> {navette} </span>
+          <Typography variant="body2" color="text.secondary">
+            {typo}
+          </Typography>
         </div>
-        <Typography variant="body2" color="text.secondary">
-          {typo}
-        </Typography>
       </CardContent>
       <div className="flex justify-center">
         <CardActions>{button}</CardActions>

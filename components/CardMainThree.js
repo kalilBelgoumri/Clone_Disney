@@ -22,7 +22,6 @@ export default function CardMainThree({
       <img id="test" src={image} alt="test" />
       <CardContent>
         <h1> {typo1} </h1>
-
         <Typography variant="body2" color="text.secondary">
           {typo}
         </Typography>

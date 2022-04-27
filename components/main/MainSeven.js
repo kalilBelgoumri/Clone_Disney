@@ -13,7 +13,6 @@ function MainSeven() {
         </button>
         <div className="px-1" />
         <button
-          id="toto"
           className="rounded-full border-2 bg-gradient-to-r from-[#022CA5] via-[#0539d4] to-[#3959bb] py-2 px-4 hover:transition-all hover:duration-500 "
           type="submit"
         >
@@ -46,12 +45,19 @@ function MainSeven() {
             <div className="mt-10  ">
               <p className=" w-52 "> {data.title} </p>
               <p className="w-52 font-sans text-xs font-normal">
-                {" "}
-                {data.description}{" "}
+                {data.description}
               </p>
             </div>
           </span>
         ))}
+      </div>
+      <div className="mt-10 flex justify-center">
+        <button
+          className="rounded-full border-2 bg-gradient-to-r from-[#022CA5] via-[#0539d4] to-[#3959bb] py-2 px-4 hover:transition-all hover:duration-500 "
+          type="submit"
+        >
+          <span className="text-white">En savoir plus</span>
+        </button>
       </div>
     </>
   );

@@ -23,6 +23,7 @@ import MainFaure from "./main/MainFaure";
 import MainFiveCard from "./MainFiveCard";
 import MainSix from "./main/MainSix";
 import MainSeven from "./main/MainSeven";
+import separator2 from "/public/separator-line-grey_desktop.png";
 
 export default function Layout({ children, title }) {
   const router = useRouter();
@@ -168,8 +169,8 @@ export default function Layout({ children, title }) {
       </Container>
 
       {/* Divider */}
-      <div className="mt-10">
-        <Image src={separator} sizes="100%" Layout="responsive" alt="mickey" />
+      <div className="mt-10 flex justify-center">
+        <Image src={separator} Layout="responsive" alt="mickey" />
       </div>
 
       {/* MainThree */}
@@ -188,8 +189,8 @@ export default function Layout({ children, title }) {
         {/* MainFive */}
         <MainFiveCard />
       </Container>
-      <div className="mt-10">
-        <Image src={separator1} sizes="100%" Layout="responsive" alt="mickey" />
+      <div className="mt-10 flex justify-center">
+        <Image src={separator1} Layout="responsive" alt="mickey" />
       </div>
       {/* MainSix */}
       <Container>
@@ -201,7 +202,10 @@ export default function Layout({ children, title }) {
       <Container maxWidth="xl">
         <MainSeven />
       </Container>
-
+      {/* Divider */}
+      <div className="mt-10 flex justify-center">
+        <Image src={separator2} Layout="responsive" alt="mickey" />
+      </div>
       <main>{children}</main>
     </>
   );

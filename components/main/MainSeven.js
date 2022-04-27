@@ -39,10 +39,12 @@ function MainSeven() {
           réserver !
         </p>
       </div>
-      <div className="flew-row flex justify-center">
-        {datasMainSeven.map((data) => (
-          <img key={data.id} src={data.url} alt="data" />
-        ))}
+      <div className="mt-10 flex justify-center ">
+        <div className="flex ">
+          {datasMainSeven.map((data) => (
+            <img className="w-52" key={data.id} src={data.url} alt="data" />
+          ))}
+        </div>
       </div>
     </>
   );

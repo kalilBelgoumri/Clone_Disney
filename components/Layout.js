@@ -198,8 +198,10 @@ export default function Layout({ children, title }) {
         </div>
       </Container>
       {/* MainSeven */}
-      <Container maxWidth="lg">
-        <MainSeven />
+      <Container maxWidth="xl">
+        <div className="flex flex-col justify-center">
+          <MainSeven />
+        </div>
       </Container>
 
       <main>{children}</main>

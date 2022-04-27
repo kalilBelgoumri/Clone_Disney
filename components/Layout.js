@@ -24,6 +24,7 @@ import MainFiveCard from "./MainFiveCard";
 import MainSix from "./main/MainSix";
 import MainSeven from "./main/MainSeven";
 import separator2 from "/public/separator-line-grey_desktop.png";
+import MainHeight from "./main/MainHeight";
 
 export default function Layout({ children, title }) {
   const router = useRouter();
@@ -206,6 +207,9 @@ export default function Layout({ children, title }) {
       <div className="mt-10 flex justify-center">
         <Image src={separator2} Layout="responsive" alt="mickey" />
       </div>
+      {/* MainHeigth */}
+      <MainHeight />
+
       <main>{children}</main>
     </>
   );

@@ -44,7 +44,7 @@ function MainSeven() {
             <img className="w-52" key={data.id} src={data.url} alt="data" />
             <div className="mt-10  ">
               <p className=" w-52 "> {data.title} </p>
-              <p className="w-52 font-sans text-xs font-normal">
+              <p className="mt-3 w-52 font-sans text-xs font-normal">
                 {data.description}
               </p>
             </div>

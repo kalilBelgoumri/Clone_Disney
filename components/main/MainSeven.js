@@ -1,5 +1,6 @@
 import React from "react";
-
+import datasMainSeven from "../../data/DatasMainSeven";
+import Image from "next/image";
 function MainSeven() {
   return (
     <>
@@ -37,6 +38,11 @@ function MainSeven() {
           pour votre séjour à Disneyland Paris. C`est le moment idéal pour
           réserver !
         </p>
+      </div>
+      <div className="flew-row flex justify-center">
+        {datasMainSeven.map((data) => (
+          <img key={data.id} src={data.url} alt="data" />
+        ))}
       </div>
     </>
   );

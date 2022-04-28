@@ -26,6 +26,7 @@ import MainFiveCard from "./MainFiveCard";
 import MainSix from "./main/MainSix";
 import MainSeven from "./main/MainSeven";
 import MainHeight from "./main/MainHeight";
+import MainNine from "./main/MainNine";
 
 export default function Layout({ children, title }) {
   const router = useRouter();
@@ -170,7 +171,7 @@ export default function Layout({ children, title }) {
         <MainTwo />
       </Container>
 
-      {/* Divider */}
+      {/* Separator */}
       <div className="mt-10 flex justify-center">
         <Image src={separator} Layout="responsive" alt="mickey" />
       </div>
@@ -205,7 +206,7 @@ export default function Layout({ children, title }) {
       <Container maxWidth="xl">
         <MainSeven />
       </Container>
-      {/* Divider */}
+      {/* Separator */}
       <div className="mt-10 flex justify-center">
         <Image src={separator2} Layout="responsive" alt="mickey" />
       </div>
@@ -214,6 +215,9 @@ export default function Layout({ children, title }) {
       <div className="mt-10 flex justify-center">
         <Image src={separator3} Layout="responsive" alt="mickey" />
       </div>
+      <Container className="mt-10" maxWidth="lg">
+        <MainNine />
+      </Container>
       <main>{children}</main>
     </>
   );

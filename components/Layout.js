@@ -17,13 +17,14 @@ import MainTwo from "./main/MainTwo";
 import Divider from "@mui/material/Divider";
 import separator from "../public/separator.png";
 import separator1 from "../public/icon-e000-disney-hotels_separator-line-grey_desktop_tcm808-222787.png";
+import separator2 from "/public/separator-line-grey_desktop.png";
+import separator3 from "/public/separator4.png";
 import MainThree from "./main/MainThree";
 import CardMainThree from "./CardMainThree";
 import MainFaure from "./main/MainFaure";
 import MainFiveCard from "./MainFiveCard";
 import MainSix from "./main/MainSix";
 import MainSeven from "./main/MainSeven";
-import separator2 from "/public/separator-line-grey_desktop.png";
 import MainHeight from "./main/MainHeight";
 
 export default function Layout({ children, title }) {
@@ -190,6 +191,7 @@ export default function Layout({ children, title }) {
         {/* MainFive */}
         <MainFiveCard />
       </Container>
+      {/* Separator */}
       <div className="mt-10 flex justify-center">
         <Image src={separator1} Layout="responsive" alt="mickey" />
       </div>
@@ -209,7 +211,9 @@ export default function Layout({ children, title }) {
       </div>
       {/* MainHeigth */}
       <MainHeight />
-
+      <div className="mt-10 flex justify-center">
+        <Image src={separator3} Layout="responsive" alt="mickey" />
+      </div>
       <main>{children}</main>
     </>
   );

@@ -14,6 +14,16 @@ function MainHeight() {
           typo1="Quel billet est fait pour vous ? "
           typo="Billet liberté 1 jour, billet daté 1 à 4 jours, ou billet daté 1 jour avec navette, à vous de choisir !
         "
+          button={
+            <button
+              className="rounded-full border-2 border-[#0046E4] py-1.5 px-4 hover:bg-gray-100 hover:transition-all hover:duration-500 "
+              type="submit"
+            >
+              <span className="  font-normal text-[#0046E4]">
+                Voir tous les billets
+              </span>
+            </button>
+          }
         />
       </div>
     </div>

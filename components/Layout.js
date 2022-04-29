@@ -27,6 +27,7 @@ import MainSix from "./main/MainSix";
 import MainSeven from "./main/MainSeven";
 import MainHeight from "./main/MainHeight";
 import MainNine from "./main/MainNine";
+import cat from "../public/télécharger.svg";
 
 export default function Layout({ children, title }) {
   const router = useRouter();
@@ -155,6 +156,7 @@ export default function Layout({ children, title }) {
           alt="background"
         />
       )}
+      <cat />
 
       <div className="relative bottom-28 flex justify-center">
         <PaperNav />
@@ -215,7 +217,7 @@ export default function Layout({ children, title }) {
       <div className="mt-10 flex justify-center">
         <Image src={separator3} Layout="responsive" alt="mickey" />
       </div>
-      <Container className="mt-10" maxWidth="md">
+      <Container className="mt-10" fixed>
         <MainNine />
       </Container>
       <main>{children}</main>

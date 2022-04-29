@@ -38,7 +38,7 @@ function MainNine() {
         </div>
       </div>
 
-      <div className="mt-10 grid-flow-col grid-cols-2 gap-10 overflow-hidden lg:grid">
+      <div className="mt-14 grid-flow-col grid-cols-2 gap-10 overflow-hidden lg:grid">
         <div className="grid place-content-center ">
           <Image
             className="rounded-lg"
@@ -48,21 +48,34 @@ function MainNine() {
           />
         </div>
         <div className="grid ">
-          <div className="grid pt-1">
+          <div className="-mt-16 grid pt-1">
             <p className="text-lg">Restez informé.e des actualités Disney !</p>
-            <p className="mt-4 text-xs  text-gray-500">
+            <p className=" mb-20 text-[14px]  text-gray-500">
               Inscrivez-vous pour recevoir par e-mail des offres spéciales et
               des informations concernant Disneyland Paris et les autres
               produits et services du groupe d’entreprises Walt Disney.
             </p>
           </div>
-          <div className=" flex items-center justify-start self-end">
+          <div className=" flex items-center justify-start ">
             <button
               className="rounded-full border-2 border-[#0046E4] py-2 px-20 text-[#0046E4] "
               type="submit"
             >
               <span className="text-bold text-md">En savoir plus</span>
             </button>
+          </div>
+        </div>
+      </div>
+      <div className="mt-10 flex justify-center">
+        <p className="text-[24px] text-[#202249]">#DisneylandParis</p>
+        <div className="grid place-content-center ">
+          <div className="mt-32">
+            <Image
+              className="flex items-center justify-center rounded-lg"
+              src={mickey}
+              priority="responsive"
+              alt="mickey"
+            />
           </div>
         </div>
       </div>

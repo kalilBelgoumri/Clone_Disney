@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import mickey from "../../public/world_disneyland-pars.jpg";
 import mickey1 from "/public/world_welcome-annual-pass-mail-masked.jpg";
+import datas from "../../data/DataMainNine";
 function MainNine() {
   return (
     <>
@@ -69,13 +70,14 @@ function MainNine() {
       <div className="mt-10 flex justify-center">
         <p className="text-[24px] text-[#202249]">#DisneylandParis</p>
         <div className="grid place-content-center ">
-          <div className="mt-32">
-            <Image
-              className="flex items-center justify-center rounded-lg"
-              src={mickey}
-              priority="responsive"
-              alt="mickey"
-            />
+          <div className="mt-32 flex justify-center gap-5 overflow-auto">
+            {datas.map((data) => (
+              <img
+                className="w-52 object-cover"
+                key="data.key"
+                src={data.url}
+              />
+            ))}
           </div>
         </div>
       </div>

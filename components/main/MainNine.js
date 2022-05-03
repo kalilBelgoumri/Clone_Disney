@@ -6,6 +6,7 @@ import mickey1 from "/public/world_welcome-annual-pass-mail-masked.jpg";
 import datas from "../../data/DataMainNine";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { useRouter } from "next/router";
+
 function MainNine() {
   const router = useRouter();
   return (
@@ -74,7 +75,7 @@ function MainNine() {
       <div className="mt-10 flex justify-center">
         <p className=" text-[24px] text-[#202249]">#DisneylandParis</p>
       </div>
-      <div className="relative mt-32 flex snap-x scroll-pl-44  justify-center gap-5 overflow-auto scrollbar-hide ">
+      <div className="relative mt-32 flex snap-x scroll-pl-44  justify-center gap-3 overflow-auto scrollbar-hide ">
         {datas.map((data, index) => (
           <div key={index} className="flex ">
             <div
@@ -83,9 +84,9 @@ function MainNine() {
             >
               <div onClick={() => router.push(data.instagram)}>{data.icon}</div>
             </div>
-            <div className="flex h-72 w-72  object-cover object-center">
+            <div className="flex h-72 w-72 ">
               <Image
-                className="snap-center rounded-md bg-cover bg-center"
+                className="snap-center rounded-md"
                 src={data.url}
                 alt="test"
               />

@@ -28,6 +28,7 @@ import MainSeven from "./main/MainSeven";
 import MainHeight from "./main/MainHeight";
 import MainNine from "./main/MainNine";
 import cat from "../public/télécharger.svg";
+import { AiOutlineInstagram } from "react-icons/ai";
 
 export default function Layout({ children, title }) {
   const router = useRouter();
@@ -165,15 +166,14 @@ export default function Layout({ children, title }) {
       <div className="-mb-5 flex justify-center">
         <h1 className="text-2xl">En ce moment à Disneyland Paris</h1>
       </div>
+      {/* MainOne */}
       <Container maxWidth="md" className="mt-7">
-        {/* MainOne */}
         <MainOne />
       </Container>
       {/* MainTwo */}
       <Container className="mt-14" maxWidth="md">
         <MainTwo />
       </Container>
-
       {/* Separator */}
       <div className="mt-10 flex justify-center">
         <Image src={separator} Layout="responsive" alt="mickey" />
@@ -218,10 +218,20 @@ export default function Layout({ children, title }) {
       <div className="mt-10 flex justify-center">
         <Image src={separator3} Layout="responsive" alt="mickey" />
       </div>
+      {/* MainNine */}
       <div className="flex items-center justify-center">
         <Container className="mt-10" maxWidth="xl">
           <MainNine />
         </Container>
+      </div>
+      <div className="mt-10 flex items-center justify-center">
+        <button
+          className="flex items-center rounded-full  bg-gradient-to-r from-[#022CA5] via-[#0539d4] to-[#3959bb] py-2 px-4 hover:transition-all hover:duration-500 "
+          type="submit"
+        >
+          <AiOutlineInstagram color="white" size="23px" />
+          <span className="pl-1 text-white">Suivez nous</span>
+        </button>
       </div>
       <main>{children}</main>
     </>

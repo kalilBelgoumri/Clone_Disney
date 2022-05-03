@@ -74,17 +74,17 @@ function MainNine() {
       <div className="mt-10 flex justify-center">
         <p className=" text-[24px] text-[#202249]">#DisneylandParis</p>
       </div>
-      <div className="relative mt-32 flex snap-x scroll-pl-20 justify-center gap-5 overflow-auto scrollbar-hide ">
+      <div className="relative mt-32 flex snap-x scroll-pl-44  justify-center gap-5 overflow-auto scrollbar-hide ">
         {datas.map((data, index) => (
-          <div key={index} className="flex">
+          <div key={index} className="flex ">
             <div
-              className="absolute
-              top-[20px] ml-[200px] cursor-pointer"
+              className="absolute top-[15px]
+              z-50 ml-[250px] cursor-pointer "
             >
               <div onClick={() => router.push(data.instagram)}>{data.icon}</div>
             </div>
-            <div className="flex w-60">
-              <img
+            <div className="flex h-72 w-72  object-cover object-center">
+              <Image
                 className="snap-center rounded-md bg-cover bg-center"
                 src={data.url}
                 alt="test"

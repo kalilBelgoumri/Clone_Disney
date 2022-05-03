@@ -3,12 +3,8 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import CardMainSix from "../CardMainSix";
 import datasMainSix from "../../data/DatasMainSix";
 import { BiWalk } from "react-icons/bi";
-import { useId } from "react";
 
 function MainSix() {
-  const ID = useId();
-  console.log(ID);
-
   return (
     <>
       <span className=" text-[24px] text-[#202249]">
@@ -38,9 +34,9 @@ function MainSix() {
               </div>
             </div>
           </div>
-          {datasMainSix?.map((data) => (
+          {datasMainSix?.map((data, index) => (
             <div
-              key={data.id}
+              key={index}
               className={`${data._id === 5 ? "hidden" : "flex"}`}
             >
               <CardMainSix

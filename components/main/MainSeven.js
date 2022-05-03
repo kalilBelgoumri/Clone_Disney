@@ -39,9 +39,9 @@ function MainSeven() {
         </p>
       </div>
       <div className="mt-10 flex justify-center gap-8 ">
-        {datasMainSeven.map((data) => (
-          <span key={data.id}>
-            <img className="w-52" key={data.id} src={data.url} alt="data" />
+        {datasMainSeven.map((data, index) => (
+          <span key={index}>
+            <img className="w-52" src={data.url} alt="data" />
             <div className="mt-10  ">
               <p className=" w-52 "> {data.title} </p>
               <p className="mt-3 w-52 font-sans text-xs font-normal">

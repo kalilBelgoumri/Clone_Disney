@@ -217,9 +217,11 @@ export default function Layout({ children, title }) {
       <div className="mt-10 flex justify-center">
         <Image src={separator3} Layout="responsive" alt="mickey" />
       </div>
-      <Container className="mt-10" fixed>
-        <MainNine />
-      </Container>
+      <div className="flex items-center justify-center">
+        <Container className="mt-10" maxWidth="xl">
+          <MainNine />
+        </Container>
+      </div>
       <main>{children}</main>
     </>
   );

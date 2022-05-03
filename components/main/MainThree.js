@@ -2,10 +2,8 @@ import React from "react";
 import DatasMain from "../../data/DatasMain";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import CardMainThree from "../CardMainThree";
-import { useId } from "react";
 
 function MainThree() {
-  const ID = useId();
   return (
     <>
       <div className="flex flex-col items-center justify-center">
@@ -34,8 +32,8 @@ function MainThree() {
               </div>
             </div>
           </div>
-          {DatasMain?.map((data) => (
-            <div key={ID} className="flex ">
+          {DatasMain?.map((data, index) => (
+            <div key={index} className="flex ">
               <CardMainThree
                 image={data.url}
                 typo1={data.title}

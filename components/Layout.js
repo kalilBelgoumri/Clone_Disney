@@ -143,6 +143,7 @@ export default function Layout({ children, title }) {
       {/* Background_cover */}
       {isTabletOrMobile ? (
         <Image
+          id="backgroundtest"
           className="w-screen"
           src={background}
           priority={true}

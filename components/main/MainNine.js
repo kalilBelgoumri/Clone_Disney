@@ -75,21 +75,21 @@ function MainNine() {
       </div>
       <div className="relative mt-32 flex snap-x scroll-pl-20 justify-center gap-5 overflow-auto ">
         {datas.map((data, index) => (
-          <ul key={index}>
+          <div key={index} className="flex">
             <div
               className="absolute
-              top-0 right-0"
+              top-[20px] ml-[200px] cursor-pointer"
             >
               {data.icon}
-
-              <AiOutlineInstagram color="white" size="40px" />
             </div>
-            <img
-              className=" w-72 snap-center rounded-md object-cover object-center "
-              src={data.url}
-              alt="test"
-            />
-          </ul>
+            <div className="flex w-64">
+              <img
+                className="snap-center rounded-md "
+                src={data.url}
+                alt="test"
+              />
+            </div>
+          </div>
         ))}
       </div>
     </>

@@ -5,8 +5,9 @@ import mickey from "../../public/world_disneyland-pars.jpg";
 import mickey1 from "/public/world_welcome-annual-pass-mail-masked.jpg";
 import datas from "../../data/DataMainNine";
 import { AiOutlineInstagram } from "react-icons/ai";
-
+import { useRouter } from "next/router";
 function MainNine() {
+  const router = useRouter();
   return (
     <>
       <div className="grid-flow-col grid-cols-2 gap-10 overflow-hidden lg:grid">
@@ -80,7 +81,7 @@ function MainNine() {
               className="absolute
               top-[20px] ml-[200px] cursor-pointer"
             >
-              {data.icon}
+              <div onClick={() => router.push(data.instagram)}>{data.icon}</div>
             </div>
             <div className="flex w-64">
               <img

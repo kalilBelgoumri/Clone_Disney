@@ -74,7 +74,7 @@ function MainNine() {
       <div className="mt-10 flex justify-center">
         <p className=" text-[24px] text-[#202249]">#DisneylandParis</p>
       </div>
-      <div className="relative mt-32 flex snap-x scroll-pl-20 justify-center gap-5 overflow-auto ">
+      <div className="relative mt-32 flex snap-x scroll-pl-20 justify-center gap-5 overflow-auto scrollbar-hide ">
         {datas.map((data, index) => (
           <div key={index} className="flex">
             <div
@@ -83,9 +83,9 @@ function MainNine() {
             >
               <div onClick={() => router.push(data.instagram)}>{data.icon}</div>
             </div>
-            <div className="flex w-64">
+            <div className="flex w-60">
               <img
-                className="snap-center rounded-md "
+                className="snap-center rounded-md bg-cover bg-center"
                 src={data.url}
                 alt="test"
               />

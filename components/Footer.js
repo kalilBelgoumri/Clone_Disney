@@ -8,7 +8,7 @@ export default function Footer() {
     <div className="card-container">
       <Tabs type="card">
         <TabPane
-          className="flex flex-col py-10"
+          className="grid grid-flow-col grid-rows-4 gap-4"
           tab="INFORMATIONS LÉGALES"
           key="1"
         >
@@ -25,6 +25,21 @@ export default function Footer() {
           <Link href="https://www.disneylandparis.com/fr-fr/legal/reglement-interieur-de-disney-village/">
             <a className="text-black hover:text-black hover:underline">
               Règlement intérieur de Disney Village
+            </a>
+          </Link>
+          <Link href="https://www.disneylandparis.com/fr-fr/legal/disneyland-paris-legal-notice/">
+            <a className="text-black hover:text-black hover:underline">
+              Mentions légales{" "}
+            </a>
+          </Link>
+          <Link href="https://www.disneylandparis.com/fr-fr/legal/notice-relative-a-la-confidentialite/">
+            <a className="text-black hover:text-black hover:underline">
+              Règles européennes de respect de la vie privée{" "}
+            </a>
+          </Link>
+          <Link href="https://www.disneylandparis.com/fr-fr/legal/reglement-interieur-parking-visiteurs/">
+            <a className="text-black hover:text-black hover:underline">
+              Règlement Intérieur du Parking Visiteurs
             </a>
           </Link>
         </TabPane>

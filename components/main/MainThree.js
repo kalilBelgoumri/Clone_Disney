@@ -4,6 +4,8 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import CardMainThree from "../CardMainThree";
 
 function MainThree() {
+  const [count, setCount] = React.useState(0);
+
   return (
     <>
       <div className="flex flex-col items-center justify-center">
@@ -13,13 +15,18 @@ function MainThree() {
           événements dans les Parcs Disney, et les Saisons en cours et à venir…
         </p>
       </div>
-      <div className="relative mt-16 flex flex-col items-center justify-center  overflow-x-auto  pb-10 pl-[24vw] pr-5 scrollbar-hide">
-        <div className=" flex snap-x justify-center gap-5">
+      <div className=" mt-16 flex flex-col items-center justify-center  overflow-x-auto  pb-10 pl-[24vw] pr-5 scrollbar-hide">
+        <div className=" relative flex gap-5">
           {/* Arrow Left */}
           <div className="absolute left-[13px] top-[241px] flex">
             <div className="flex cursor-pointer rounded-full bg-white px-2 py-2 shadow-2xl ">
               <div className="flex justify-center">
-                <MdKeyboardArrowLeft size="25px" />
+                {count > 0 && (
+                  <MdKeyboardArrowLeft
+                    onClick={() => setCount(count - 1)}
+                    size="25px"
+                  />
+                )}
               </div>
             </div>
           </div>
@@ -28,7 +35,12 @@ function MainThree() {
           <div className="absolute right-[19px] top-[241px] flex">
             <div className="flex cursor-pointer rounded-full bg-white px-2 py-2 shadow-2xl ">
               <div className="flex justify-center">
-                <MdKeyboardArrowRight size="25px" />
+                {count < DatasMain.length - 1 && (
+                  <MdKeyboardArrowRight
+                    onClick={() => setCount(count + 1)}
+                    size="25px"
+                  />
+                )}
               </div>
             </div>
           </div>

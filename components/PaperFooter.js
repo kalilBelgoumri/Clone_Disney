@@ -1,9 +1,9 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
-import MenuTab from "./MenuTab";
+import Footer from "./Footer";
 
-export default function PaperNav() {
+export default function PaperFooter() {
   return (
     <Box
       sx={{
@@ -21,6 +21,7 @@ export default function PaperNav() {
           heigh: {
             xs: 500,
             sm: 500,
+            lg: 1000,
           },
           bottom: 80,
           boxShadow: "rgb(0 0 0 / 10%) 0px 4px 32px;",
@@ -28,7 +29,7 @@ export default function PaperNav() {
       }}
     >
       <Paper className="flex items-center justify-center" variant="outlined">
-        <MenuTab />
+        <Footer />
       </Paper>
     </Box>
   );

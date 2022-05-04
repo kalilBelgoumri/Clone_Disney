@@ -29,6 +29,8 @@ import MainHeight from "./main/MainHeight";
 import MainNine from "./main/MainNine";
 import cat from "../public/télécharger.svg";
 import { AiOutlineInstagram } from "react-icons/ai";
+import PaperFooter from "./PaperFooter";
+import Footer from "./Footer";
 
 export default function Layout({ children, title }) {
   const router = useRouter();
@@ -233,6 +235,11 @@ export default function Layout({ children, title }) {
           <span className="pl-1 text-white">Suivez nous</span>
         </button>
       </div>
+      <Container maxWidth="xl">
+        <div className="mt-10 flex w-full justify-center">
+          <Footer />
+        </div>
+      </Container>
       <main>{children}</main>
     </>
   );

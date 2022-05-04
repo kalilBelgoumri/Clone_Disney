@@ -112,7 +112,7 @@ export default function MenuTab() {
             <div className="text-[rgb(37, 48, 80)] absolute left-[30px] top-[80px] flex  font-avenir text-[12px] sm:left-[133px] md:left-[137px] lg:left-[392px] lg:top-0">
               Hôtels et Resorts
             </div>
-            <div className="text-[rgb(37, 48, 80)] absolute top-[163px] right-[188px] flex font-avenir text-[12px] sm:right-[293px] md:right-[288px] lg:top-0 lg:right-[496px]">
+            <div className="text-[rgb(37, 48, 80)] absolute top-[163px] right-[188px] flex font-avenir text-[12px] sm:right-[293px] md:right-[288px] lg:top-0 lg:right-[340px]">
               Chambres et visiteurs
             </div>
           </div>

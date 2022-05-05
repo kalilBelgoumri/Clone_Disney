@@ -30,7 +30,6 @@ import MainNine from "./main/MainNine";
 import cat from "../public/télécharger.svg";
 import { AiOutlineInstagram } from "react-icons/ai";
 import PaperFooter from "./PaperFooter";
-import Footer from "./Footer";
 
 export default function Layout({ children, title }) {
   const router = useRouter();
@@ -236,8 +235,7 @@ export default function Layout({ children, title }) {
         </button>
       </div>
       <Container maxWidth="xl">
-        <div className="mt-10 flex w-full justify-center">
-          {/* <Footer /> */}
+        <div className="mt-32 flex w-full justify-center">
           <PaperFooter />
         </div>
       </Container>

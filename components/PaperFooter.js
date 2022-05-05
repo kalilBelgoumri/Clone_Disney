@@ -19,11 +19,8 @@ export default function PaperFooter() {
           },
 
           heigh: {
-            xs: 500,
-            sm: 500,
-            lg: 1000,
+            lg: "1000px",
           },
-          bottom: 80,
           boxShadow: "rgb(0 0 0 / 10%) 0px 4px 32px;",
         },
       }}

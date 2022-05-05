@@ -8,12 +8,12 @@ export default function Footer() {
     <div className="card-container">
       <Tabs type="card">
         <TabPane
-          className="grid grid-flow-col grid-rows-4 gap-4"
+          className="leading-2 grid  grid-flow-col grid-rows-3 gap-4 overflow-hidden"
           tab="INFORMATIONS LÉGALES"
           key="1"
         >
           <Link href="https://www.disneylandparis.com/fr-fr/legal/conditions-generales-de-vente/">
-            <a className="text-black hover:text-black hover:underline">
+            <a className=" font-sans text-[14px] text-black hover:text-black hover:underline">
               Conditions générales de réservation et assurances séjour
             </a>
           </Link>
@@ -40,6 +40,31 @@ export default function Footer() {
           <Link href="https://www.disneylandparis.com/fr-fr/legal/reglement-interieur-parking-visiteurs/">
             <a className="text-black hover:text-black hover:underline">
               Règlement Intérieur du Parking Visiteurs
+            </a>
+          </Link>
+          <Link href="https://www.disneylandparis.com/fr-fr/legal/reglement-interieur-point-accueil-animaux/">
+            <a className="text-black hover:text-black hover:underline">
+              Règlement intérieur point d'accueil animaux{" "}
+            </a>
+          </Link>
+          <Link href="https://www.disneylandparis.com/fr-fr/legal/reglement-interieur-point-accueil-animaux/">
+            <a className="text-black hover:text-black hover:underline">
+              Règlement intérieur point d'accueil animaux{" "}
+            </a>
+          </Link>
+          <Link href="https://www.disneylandparis.com/fr-fr/legal/reglement-interieur-point-accueil-animaux/">
+            <a className="text-black hover:text-black hover:underline">
+              Règlement intérieur point d'accueil animaux{" "}
+            </a>
+          </Link>
+          <Link href="https://www.disneylandparis.com/fr-fr/legal/reglement-interieur-point-accueil-animaux/">
+            <a className="text-black hover:text-black hover:underline">
+              Règlement intérieur point d'accueil animaux{" "}
+            </a>
+          </Link>
+          <Link href="https://www.disneylandparis.com/fr-fr/legal/reglement-interieur-point-accueil-animaux/">
+            <a className="text-black hover:text-black hover:underline">
+              Règlement intérieur point d'accueil animaux{" "}
             </a>
           </Link>
         </TabPane>

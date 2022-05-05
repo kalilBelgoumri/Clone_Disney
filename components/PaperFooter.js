@@ -25,7 +25,10 @@ export default function PaperFooter() {
         },
       }}
     >
-      <Paper className="flex items-center justify-center" variant="outlined">
+      <Paper
+        className="flex h-52 items-center justify-center pb-7"
+        variant="outlined"
+      >
         <Footer />
       </Paper>
     </Box>

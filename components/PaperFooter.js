@@ -86,6 +86,34 @@ export default function PaperFooter() {
               />
             </li>
           </ul>
+          <div className="flex flex-col self-end pl-52">
+            <p className="text-right">
+              Une question sur tous les produits et offres disponibles ?
+            </p>
+            <p>
+              Demandez l’aide de nos experts basés au cœur des Parcs Disney en
+              les contactant au
+            </p>
+          </div>
+          <div className="flex items-center justify-center">
+            <div className="ml-10">
+              <button
+                className="flex items-center rounded-full border-2 py-2  px-8 "
+                type="submit"
+              >
+                <Image
+                  src="/disney-btn-fixe.png"
+                  width="20"
+                  height="20"
+                  alt="mickey"
+                />
+                <span className="pl-1 text-black"> 0 825 300 500 </span>
+              </button>
+              <p className="text-center text-[9px]">
+                Service 0,15 €/min + prix appel
+              </p>
+            </div>
+          </div>
         </div>
       </Paper>
     </Box>

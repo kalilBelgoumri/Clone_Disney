@@ -8,12 +8,12 @@ export default function Footer() {
     <div className="card-container">
       <Tabs type="card">
         <TabPane
-          className="leading-2 grid  grid-flow-col grid-rows-3 gap-4 overflow-hidden"
+          className="grid grid-flow-col grid-rows-3  gap-4 overflow-hidden leading-5"
           tab="INFORMATIONS LÉGALES"
           key="1"
         >
           <Link href="https://www.disneylandparis.com/fr-fr/legal/conditions-generales-de-vente/">
-            <a className=" font-sans text-[14px] text-black hover:text-black hover:underline">
+            <a className="font-sans text-[14px] text-black hover:text-black hover:underline">
               Conditions générales de réservation et assurances séjour
             </a>
           </Link>
@@ -28,8 +28,8 @@ export default function Footer() {
             </a>
           </Link>
           <Link href="https://www.disneylandparis.com/fr-fr/legal/disneyland-paris-legal-notice/">
-            <a className="text-black hover:text-black hover:underline">
-              Mentions légales{" "}
+            <a className=" text-black hover:text-black hover:underline">
+              Mentions légales
             </a>
           </Link>
           <Link href="https://www.disneylandparis.com/fr-fr/legal/notice-relative-a-la-confidentialite/">

@@ -235,7 +235,7 @@ export default function Layout({ children, title }) {
         </button>
       </div>
       <Container maxWidth="xl">
-        <div className="mt-32 flex w-full justify-center">
+        <div className="mt-52 flex w-full justify-center">
           <PaperFooter />
         </div>
       </Container>

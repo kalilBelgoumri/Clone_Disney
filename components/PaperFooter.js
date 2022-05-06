@@ -39,43 +39,54 @@ export default function PaperFooter() {
             Restons connectés
           </p>
         </div>
-        <ul className="flex">
-          <li className="cursor-pointer px-2">
-            <Image
-              src="/social/social_facebook_tcm808-174864.svg"
-              width="36"
-              height="36"
-              alt="facebook"
-              onClick={() =>
-                router.push("https://www.facebook.com/DisneylandParisfr/")
-              }
-            />
-          </li>
-          <li className="cursor-pointer px-2">
-            <Image
-              src="/social/social_youtube_tcm808-174868.svg"
-              width="36"
-              height="36"
-              alt="facebook"
-            />
-          </li>{" "}
-          <li className="cursor-pointer px-2">
-            <Image
-              src="/social/social_instagram_tcm808-174866.svg"
-              width="36"
-              height="36"
-              alt="facebook"
-            />
-          </li>{" "}
-          <li className="cursor-pointer px-2">
-            <Image
-              src="/social/social_twitter_tcm808-174867.svg"
-              width="36"
-              height="36"
-              alt="facebook"
-            />
-          </li>
-        </ul>
+        <div className="flex self-start pl-12">
+          <ul className="flex">
+            <li className="cursor-pointer px-1">
+              <Image
+                src="/social/social_facebook_tcm808-174864.svg"
+                width="36"
+                height="36"
+                alt="facebook"
+                onClick={() =>
+                  router.push("https://www.facebook.com/DisneylandParisfr/")
+                }
+              />
+            </li>
+            <li className="cursor-pointer px-1">
+              <Image
+                src="/social/social_youtube_tcm808-174868.svg"
+                width="36"
+                height="36"
+                alt="facebook"
+                onClick={() =>
+                  router.push("https://www.youtube.com/user/disneylandparis")
+                }
+              />
+            </li>{" "}
+            <li className="cursor-pointer px-1">
+              <Image
+                src="/social/social_instagram_tcm808-174866.svg"
+                width="36"
+                height="36"
+                alt="facebook"
+                onClick={() =>
+                  router.push("https://instagram.com/disneylandparis/")
+                }
+              />
+            </li>{" "}
+            <li className="cursor-pointer px-1">
+              <Image
+                src="/social/social_twitter_tcm808-174867.svg"
+                width="36"
+                height="36"
+                alt="facebook"
+                onClick={() =>
+                  router.push("http://www.twitter.com/disneylandparis")
+                }
+              />
+            </li>
+          </ul>
+        </div>
       </Paper>
     </Box>
   );
